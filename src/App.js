@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Registro from './component/Registro';
 import logo from './IMPESA_SolidPMS.png';
+import logoReact from './logo.svg';
+
 
 
 class App extends Component {
@@ -9,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} alt="logo" />
+          <img src={logoReact} className="App-logo" alt="logo" />
         </header>
         <Registro />
       </div>
