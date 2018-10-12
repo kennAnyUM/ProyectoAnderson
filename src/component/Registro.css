@@ -1,6 +1,6 @@
 .containerDiv {
     text-align: center;
-    background: #4681CF;
+    background: #eeeeee;
     color: #435160;
     font-family: 'Roboto';
 }
@@ -14,12 +14,12 @@ input {
     padding: 20px 0px;
     background: transparent;
     border: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid black;
     outline: none;
-    color: #6D7781;
+    color: black;
     font-size: 16px;
     margin-top: 20px;
-    color: white;
+    color: black;
 }
 
 
@@ -45,13 +45,13 @@ input {
 }
 
 ::-webkit-input-placeholder {
-    color: white;
+    color: black;
     font-size: 16px;
     font-family: 'Roboto';
 }
 
 label {
-    color: white;
+    color: black;
     font-size: 16px;
     font-family: 'Roboto';
     margin: 20px;
@@ -87,7 +87,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: black;
   -box-shadow: 0 0 0px 1000px #2E5490 inset;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -101,3 +101,78 @@ select:-webkit-autofill:focus {
     font-size: calc(10px + 2vmin);
     color: white;
   }
+
+  .footer-distributed{
+	background-color: #4681CF;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 45px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+	color:  black;
+	font-size: 14px;
+	margin: 0;
+}
+
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
+}

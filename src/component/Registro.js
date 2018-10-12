@@ -7,12 +7,10 @@ class registroColaborador extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-7 col-sm-7 col-lg-7">
+                    <div className="col-xs-5 col-sm-5 col-lg-5">
                         <div className="containerDiv">
-                            <header className="App-header-registro">
-                                <br></br>
-                            </header>
-                            <input type="email" name="email" id="email" placeholder="Email"></input><br></br>
+                            <h3>Ingrese los datos requridos para completar el registro.</h3>
+                            <input type="email" name="email" id="email" placeholder="Email" required></input><br></br>
 
                             <input type="text" name="name" id="name" placeholder="Nombre"></input><br></br>
 
@@ -33,6 +31,8 @@ class registroColaborador extends Component {
                             <button type="submit">Registrar</button>
                         </div>
                     </div>
+                    <div className="col-xs-2 col-sm-2 col-lg-2">
+                    </div>
                     <div className="col-xs-5 col-sm-5 col-lg-5">
                         <div className="divLogin">
                             <header className="App-header-registro">
@@ -44,7 +44,6 @@ class registroColaborador extends Component {
                             <input className="inputLogin" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
                             <button type="submit">Entrar</button>
                         </div>
-
                     </div>
                 </div>
             </div>
