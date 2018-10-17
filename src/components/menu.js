@@ -29,10 +29,11 @@ class Menu extends Component {
                 <a className="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
                     <br />
                     <br />
+                     <Link to="/InsertarIncidencia">
                     <Button color="primary" variant="extendedFab" aria-label="Add" data-toggle="list" href="" onClick={this.setRedirect}>
-                        <AddIcon />  
-                        <Link to="/InsertarIncidencia">Reportar incidencia</Link>
+                        <AddIcon />    Reportar incidencia         
                     </Button>
+                    </Link>
                     <br /> <br /> <br />
                 </a>
                 <a className="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#/components/incidentAssignment.js" role="tab" aria-controls="home"> INICIO</a>
