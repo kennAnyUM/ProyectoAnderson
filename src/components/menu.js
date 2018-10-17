@@ -37,8 +37,8 @@ class Menu extends Component {
                 </a>
                 <a className="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#/components/incidentAssignment.js" role="tab" aria-controls="home"> INICIO</a>
                 <a className="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="myIncidents">Mis incidencias</a>
-                <a className="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="History">Histprial de incidencias</a>
-                <a className="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Configuracion</a>
+                <a className="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="History">Historial de incidencias</a>
+                <a className="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Configuración</a>
                 <a className="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" >
                    
                     <br /><br /> <br /><br />  <br /> </a>
