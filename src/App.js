@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
-import Registro from './component/Registro';
-import Footer from './component/Footer'
-import logoReact from './logo.svg';
-
+import PropTypes from 'prop-types';
+import Contenedor from './Contenerdor';
 
 
 class App extends Component {
+  static propTypes = {
+    children: PropTypes.object.isRequired
+  };
   render() {
+    const { children } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logoReact} className="App-logo" alt="logo" />
-        </header>
-        <Registro />
-        <Footer />
+      <div>
+        <Contenedor body={children}/>
       </div>
+
     );
   }
 }
