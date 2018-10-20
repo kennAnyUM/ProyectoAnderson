@@ -1,31 +1,9 @@
-.containerDiv {
-    text-align: center;
-    background: #eeeeee;
-    color: #435160;
-    font-family: 'Roboto';
-}
-
 body {
     background: #eeeeee;
 }
 
-input {
-    width: 350px;
-    padding: 20px 0px;
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid black;
-    outline: none;
-    color: black;
-    font-size: 16px;
-    margin-top: 20px;
-    color: black;
-}
-
 
 .inputLogin {
-    width: 350px;
-    padding: 20px 0px;
     background: transparent;
     border: 0;
     border-bottom: 1px solid #fff;
@@ -36,39 +14,11 @@ input {
     color: white;
 }
 
-
-
-.select {
-    margin: 30px;
-    background-color: #2E5490;
-    border-color: #4681CF;
-}
-
-::-webkit-input-placeholder {
-    color: black;
-    font-size: 16px;
-    font-family: 'Roboto';
-}
-
-label {
-    color: black;
-    font-size: 16px;
-    font-family: 'Roboto';
-    margin: 20px;
-}
-
-
 button {
-    background: #2E5490;
-    border: 0;
-    width: 350px;
-    height: 40px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    margin: 50px;
+    margin: 10px;
 }
+
+
 
 .divLogin {
     text-align: center;
@@ -77,24 +27,9 @@ button {
     font-family: 'Roboto';
 }
 
-/* Change Autocomplete styles in Chrome*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  -webkit-text-fill-color: black;
-  -box-shadow: 0 0 0px 1000px #2E5490 inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
 .App-header-registro {
     background-color: #2E5490;
-    display: flex;
+    display: flow-root;
     flex-direction: column;
     align-items: center;
     justify-content: center;
