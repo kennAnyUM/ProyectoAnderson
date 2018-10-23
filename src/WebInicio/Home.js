@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import './Home.css';
-import TableIncedents from './components/table.js';
+import TableIncedents from '../components/table.js';
 
 import Navigation from '../components/Navigation';
 
 
 class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      incidents
-    }
-  }
 
   render() {
     return (
