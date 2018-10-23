@@ -8,9 +8,6 @@ class registroColaborador extends Component {
     render() {
         return (
             <div>
-                <header className="App-header-registro">
-                    <p>Registro Incidencia</p>
-                </header>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-4 col-sm-4 col-lg-4">

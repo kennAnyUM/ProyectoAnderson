@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
 import Contenedor from './Contenerdor';
+import Header from './components/Navigation';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -12,7 +14,9 @@ class App extends Component {
     const { children } = this.props;
     return (
       <div>
+        <Header />
         <Contenedor body={children}/>
+        <Footer />
       </div>
 
     );
