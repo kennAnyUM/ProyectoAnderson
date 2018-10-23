@@ -14,7 +14,7 @@ class App extends Component {
     const { children } = this.props;
     return (
       <body>
-        <div>
+        <div className="container" id="div_ancho_completo">
           <Header />
           <Contenedor body={children} />
           <Footer />
