@@ -1,62 +1,47 @@
-import React from 'react';
 import './estilo.css';
-import Foto from './FotoPerfil';
+import React from 'react';
 
-class Dropdown extends React.Component {
-    constructor() {
-        super();
 
-        this.state = {
-            displayMenu: false,
-        };
+class navigatiom extends React.Component {
+  render() {
+    return (
+      <nav className="container-fluid navbar navbar-expand-lg navbar-light" id="nav">
+        <a className="navbar-brand" href="#"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")}width="35" height="35"></img></a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        this.showDropdownMenu = this.showDropdownMenu.bind(this);
-        this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Inicio<span className="sr-only">(current)</span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Crear Incidencia</a>
+            </li>
+            <li className="nav-item dropdown">
+            
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuracion</a>
 
-    };
-
-    showDropdownMenu(event) {
-        event.preventDefault();
-        this.setState({ displayMenu: true }, () => {
-            document.addEventListener('click', this.hideDropdownMenu);
-        });
-    }
-
-    hideDropdownMenu() {
-        this.setState({ displayMenu: false }, () => {
-            document.removeEventListener('click', this.hideDropdownMenu);
-        });
-
-    }
-
-    render() {
-        return (
-            <nav>
-                <div className="dropdown">
-                    <a className="button" onClick={this.showDropdownMenu}><img src={require("./imagenes/menu2.png")} width="30px" height="30px" ></img> </a>
-                    <a className= "perfil"><Foto/></a>
-                    <p className="name">Maria Jose Brenes</p>
-                    <p className="mail">mariaJB1996@impesa.net</p>
-                    {this.state.displayMenu ? (
-                        <ul>
-                           
-                            <li><a href="#Manage Pages">Manage Pages</a></li>
-                            <li><a href="#Create Ads">Create Ads</a></li>
-                            <li><a href="#Manage Ads">Manage Ads</a></li>
-                            <li><a href="#Activity Logs">Activity Logs</a></li>
-                            <li><a href="#Setting"><img src={require("./imagenes/setting.png")} width="30px" height="30px" ></img>    Setting</a></li>
-                            <li><a href="#Log Out"><img src={require("./imagenes/log-out.png")} width="25px" height="25px" ></img>  Log Out</a></li>
-                        </ul>
-                    ) :
-                        (
-                            null
-                        )
-                    }
-
-                </div>
-            </nav>
-        );
-    }
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="#">Action</a>
+                <a className="dropdown-item" href="#">Another action</a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <a className="mr-sm-4" type="text" >Maria Jose Brenes</a>
+            <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Iniciar Sesion</button>
+          </form>
+        </div>
+      </nav>
+    );
+  }
 }
-
-export default Dropdown;
+export default navigatiom;
