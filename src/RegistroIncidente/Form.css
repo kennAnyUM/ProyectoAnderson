@@ -1,11 +1,9 @@
 .H5-form{
-  font-size: 90%;
-  font-family: 'Roboto';
+  font-size: 13px;
 }
 
 .H4-form{
-  font-size: 80%;
-  font-family: 'Roboto';
+  font-size: 10px;
 }
 
 .Container-div{
@@ -13,8 +11,7 @@
 text-align: center;
 font-size: small;
 color: black;
-font-family: 'Roboto'; 
-margin: 15%; 
+
 
 }
 
@@ -25,7 +22,6 @@ margin: 15%;
   height: 60%;
   width: 60%;
   margin-left: 11%;
-  font-family: 'Roboto';
 
 }
 
@@ -39,10 +35,10 @@ margin: 15%;
 margin-left: 240px;
 margin-top: -7px;
 text-align: center;
-background: #1DCFEA;
+background: rgb(50, 29, 234);
 height: 50px;
 width: 100px;
-font-family: 'Roboto';
+
 
 }
 
