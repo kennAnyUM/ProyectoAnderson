@@ -1,35 +1,70 @@
-  .H5-form{
-    text-align: left;
-    font-family: 'Roboto';
-  }
-
-  .H4-form{
-    font-family: 'Roboto';
-  }
-
-  .Container-div{
-  text-align: left;
-  font-size: small;
-  color: black;
+.H5-form{
+  font-size: 90%;
   font-family: 'Roboto';
-  margin: 40px;
-  }
+}
 
-  .abarcadoTextArea{
+.H4-form{
+  font-size: 80%;
+  font-family: 'Roboto';
+}
 
-    align-items: center;
-    text-align: center;
-    font-family: 'Roboto';
+.Container-div{
 
-  }
+text-align: center;
+font-size: small;
+color: black;
+font-family: 'Roboto'; 
+margin: 15%; 
 
-  .blue-border-focus .form-control:focus {
-    border: 1px solid #2c55db;
-    box-shadow: 0 0 0 0.2rem rgba(65, 92, 240, 0.623);
+}
+
+.abarcadoTextArea{
+
+  align-items: center;
+  text-align: center;
+  height: 60%;
+  width: 60%;
+  margin-left: 11%;
+  font-family: 'Roboto';
+
+}
+
+.blue-border-focus .form-control:focus {
+  border: 1px solid #2c55db;
+  box-shadow: 0 0 0 0.2rem rgba(65, 92, 240, 0.623);
 }
 
 .abarcadoBotonNotificar{
-  text-align: center;
-  font-family: 'Roboto';
+
+margin-left: 240px;
+margin-top: -7px;
+text-align: center;
+background: #1DCFEA;
+height: 50px;
+width: 100px;
+font-family: 'Roboto';
 
 }
+
+.selectToForm{
+
+background: white;  
+text-align-last: center;
+border-color: white;
+border-radius: 10px 10px 10px 10px;
+width: 200px;
+height: 20px;
+font-size: 12px;
+
+}
+
+.selectDateTime{
+
+  all: unset;
+  background: white;
+  border-radius: 10px 10px 10px 10px;
+  width: 200px;
+  height: 20px;
+  font-size: 12px;
+
+  }

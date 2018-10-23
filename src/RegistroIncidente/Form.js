@@ -11,6 +11,9 @@ import { Button } from 'reactstrap';
       return (
         <form>
           <fieldset className="fields">
+          <header className="App-header">
+            <p>Insertar Incidencia</p>
+          </header>
             <div>
               <Select /> 
               <br></br> 
@@ -101,68 +104,68 @@ import { Button } from 'reactstrap';
 
 
       return (
-      <div Class="container">
+      <div className="container">
 
-        <div Class="row">
+        <div className="row">
              
-        <div class="col-xs-4 col-md-4">
+        <div className="col-xs-4 col-md-4">
         
-        <div Class="Container-div">
+        <div className="Container-div">
         
-        <h5 class="H5-form">Tipo Incidencia</h5>
-        <select class="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
+        <h5 className="H5-form">Tipo incidencia</h5>
+        <select className="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
         {listaIncidencias}
         </select>
-        <h4 class="H4-form">{this.state.tech}</h4>
+        <h4 className="H4-form">{this.state.tech}</h4>
 
         <br></br>
 
-        <h5 class="H5-form">Impacto Incidencia</h5>
-        <select class="selectToForm" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
+        <h5 className="H5-form">Impacto incidencia</h5>
+        <select className="selectToForm" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
         {listaImpacto}
         </select>
-        <h4 class="H4-form">{this.state.tech2}</h4>
+        <h4 className="H4-form">{this.state.tech2}</h4>
         
         </div>
 
         </div>
 
-        <div class="col-xs-4 col-md-4">
+        <div className="col-xs-4 col-md-4">
         
-        <div Class="Container-div">
+        <div className="Container-div">
 
-        <h5 class="H5-form">Tecnologia Afectada</h5>
-        <select class="selectToForm" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
+        <h5 className="H5-form">Tecnología afectada</h5>
+        <select className="selectToForm" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
         {listaTecno}
         </select>
-        <h4 class="H4-form">{this.state.tech4}</h4>
+        <h4 className="H4-form">{this.state.tech4}</h4>
         
         <br></br>
         
-        <h5 class="H5-form">Seleccione Fecha Descubrimiento</h5>
+        <h5 className="H5-form">Fecha de descubrimiento</h5>
         {MyDatePicker()}
 
         </div>
 
         </div>
 
-        <div class="col-xs-4 col-md-4">
+        <div className="col-xs-4 col-md-4">
         
-        <div Class="Container-div">
+        <div className="Container-div">
 
-        <h5 class="H5-form">Grado De Control</h5>
-        <select class="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
+        <h5 className="H5-form">Grado de control</h5>
+        <select className="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
         {listaControl}
         </select>
-        <h4 class="H4-form">{this.state.tech5}</h4>
+        <h4 className="H4-form">{this.state.tech5}</h4>
 
         <br></br>
 
-        <h5 class="H5-form">Area Incidencia</h5>
-        <select class="selectToForm" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
+        <h5 className="H5-form">Área incidencia</h5>
+        <select className="selectToForm" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
         {listaAreas}
         </select>
-        <h4 class="H4-form">{this.state.tech3}</h4>
+        <h4 className="H4-form">{this.state.tech3}</h4>
         
         </div>
 
@@ -178,18 +181,18 @@ import { Button } from 'reactstrap';
 
   function MyDatePicker() {
     return (
-      <input class="selectToForm" type="date" id="example-date-input" />
+      <input className="selectDateTime" type="datetime-local" id="example-date-input" />
     );
   }
 
   function MyTextArea() {
     return (
 
-      <div class="abarcadoTextArea">
+      <div className="abarcadoTextArea">
 
-        <div class="form-group blue-border-focus">
-        <label for="exampleFormControlTextarea5">Inserte La Descripcion De La Incidencia</label>
-        <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+        <div className="form-group blue-border-focus">
+        <label for="exampleFormControlTextarea5">Inserte la descripción de la incidencia</label>
+        <textarea className="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
 
       </div>
 
@@ -202,9 +205,9 @@ import { Button } from 'reactstrap';
   function MyNotificationButton() {
     return (
 
-      <div class="abarcadoBotonNotificar">
+      <div className="abarcadoBotonNotificar">
 
-      <Button class="abarcadoBotonNotificar" color="primary" >Notificar</Button> 
+      <Button className="abarcadoBotonNotificar"  >Notificar</Button> 
 
       </div>
 
