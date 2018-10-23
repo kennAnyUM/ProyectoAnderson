@@ -7,49 +7,70 @@ class registroColaborador extends Component {
     render() {
         return (
             <div>
-                <header className="App-header">
-                        <p>Registro Incidencia</p>
-                    </header>
+                <header className="App-header-registro">
+                    <p>Registro Incidencia</p>
+                </header>
                 <div className="container">
-                    
                     <div className="row">
-                        <div className="col-xs-5 col-sm-5 col-lg-5">
-                            <div className="containerDiv">
-                                <h3>Ingrese los datos requridos para completar el registro.</h3>
-                                <input type="email" name="email" id="email" placeholder="Email" required></input><br></br>
+                        <div className="col-xs-4 col-sm-4 col-lg-4">
+                            <form>
+                                <div className="form-group">
+                                    <label for="exampleInputEmail1">Correo electronico</label>
+                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
+                                    <small id="emailHelp" className="form-text text-muted">Ejemplo@impesa.net.</small>
+                                </div>
+                                <div className="form-group">
+                                    <label for="exampleInputPassword1">Nombre</label>
+                                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"></input>
+                                </div>
+                                <div className="form-group">
+                                    <label for="apellidoUsuario">Primer apellido</label>
+                                    <input type="text" className="form-control" id="apellidoUsuario" placeholder="Apellido"></input>
+                                </div>
+                                <div className="form-group">
+                                    <label for="segundoApellidoUsuario">Segundo apellido</label>
+                                    <input type="text" class="form-control" id="segundoApellidoUsuario" placeholder="Segundo apellido"></input>
+                                </div>
+                                <fieldset className="form-group">
+                                    <legend>Tipo usuario</legend>
+                                    <div className="form-check">
+                                        <label className="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked></input>Interno</label>
+                                    </div>
+                                    <div className="form-check">
+                                        <label className="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"></input>Externo</label>
+                                    </div>
+                                </fieldset>
+                                <div className="form-group">
+                                    <label for="contraseñaRegistro">Contraseña</label>
+                                    <input type="password" class="form-control" id="contraseñaRegistro" placeholder="Contraseña"></input>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirnContraseña">Contraseña</label>
+                                    <input type="password" class="form-control" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
+                                </div>
 
-                                <input type="text" name="name" id="name" placeholder="Nombre"></input><br></br>
-
-                                <input type="text" name="apellido" id="apellido" placeholder="Primer apellido"></input><br></br>
-
-                                <input type="text" name="segundoApellido" id="segundoApellido" placeholder="Segundo apellido"></input><br></br>
-                                <label>Tipo de usuario: </label>
-                                <input type="checkbox" name="Empresa1" value="Interno"/>Interno
-                                <input type="checkbox" name="Empresa2" value="Externo"/>Externo
-
-                                <input type="text" name="empresaExterna" id="empresaExterna" placeholder="Empresa externa"></input><br></br>
-
-                                <input type="password" name="password" id="password" placeholder="Contraseña"></input><br></br>
-
-                                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"></input><br></br>
-                                <button type="submit">Entrar</button>
-                            </div>
+                                <button className="btn btn-primary">Registrar</button>
+                            </form>
                         </div>
-                        <div className="col-xs-2 col-sm-2 col-lg-2">
+                        <div className="col-xs-4 col-sm-4 col-lg-4">
                         </div>
-                        <div className="col-xs-5 col-sm-5 col-lg-5">
-                            <div className="divLogin">
-                                <header className="App-header-registro">
-                                    <br></br>
-                                </header>
-                                <label>Ya posee una cuenta?</label><br></br>
-                                <img src={logo} alt="logo" width="200px" />
-                                <input className="inputLogin" type="email" name="emailLogin" id="emailLogin" placeholder="Email"></input><br></br>
-                                <input className="inputLogin" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
-                                <Link to="/incidentes"><button>Ingresar</button></Link>
-                                
-
-                            </div>
+                        <div className="col-xs-4 col-sm-4 col-lg-4">
+                            <form>
+                                <div className="form-group">
+                                    <label>Ya posee una cuenta?</label><br></br>
+                                    <img src={logo} alt="logo" width="200px" /><br></br>
+                                </div>
+                                <div className="form-group">
+                                    <label for="emailLogin">Correo electronico</label>
+                                    <input type="email" className="form-control" id="emailLogin" aria-describedby="correoLogin" placeholder="Enter email"></input>
+                                </div>
+                                <div className="form-group">
+                                    <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
+                                    <Link to="/incidentes"><button>Ingresar</button></Link>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

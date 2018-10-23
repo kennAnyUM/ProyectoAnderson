@@ -1,7 +1,6 @@
 import React from 'react';
 import './Form.css';
 import 'react-day-picker/lib/style.css';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
 import { Button } from 'reactstrap';
 
 class Form extends React.Component {
@@ -12,9 +11,11 @@ class Form extends React.Component {
     return (
       <form>
         <fieldset className="fields">
+          <header className="App-header">
+            <p>Insertar Incidencia</p>
+          </header>
           <div>
             <Select />
-            <br></br>
             {MyTextArea()}
             {MyNotificationButton()}
           </div>
@@ -106,20 +107,20 @@ class Select extends React.Component {
 
         <div className="row">
 
-          <div className="col-xs-4 col-md-4 col-lg-4">
+          <div className="col-xs-4 col-md-4">
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Tipo Incidencia</h5>
-              <select className="styled-select rounded" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
+              <h5 className="H5-form">Tipo incidencia</h5>
+              <select className="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
                 {listaIncidencias}
               </select>
               <h4 className="H4-form">{this.state.tech}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Impacto Incidencia</h5>
-              <select className="styled-select rounded" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
+              <h5 className="H5-form">Impacto incidencia</h5>
+              <select className="selectToForm" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
                 {listaImpacto}
               </select>
               <h4 className="H4-form">{this.state.tech2}</h4>
@@ -128,39 +129,39 @@ class Select extends React.Component {
 
           </div>
 
-          <div className="col-xs-4 col-md-4 col-lg-4">
+          <div className="col-xs-4 col-md-4">
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Tecnologia Afectada</h5>
-              <select className="styled-select rounded" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
+              <h5 className="H5-form">Tecnología afectada</h5>
+              <select className="selectToForm" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
                 {listaTecno}
               </select>
               <h4 className="H4-form">{this.state.tech4}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Seleccione Fecha Descubrimiento</h5>
+              <h5 className="H5-form">Fecha de descubrimiento</h5>
               {MyDatePicker()}
 
             </div>
 
           </div>
 
-          <div className="col-xs-4 col-md-4 col-lg-4">
+          <div className="col-xs-4 col-md-4">
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Grado De Control</h5>
-              <select className="styled-select rounded" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
+              <h5 className="H5-form">Grado de control</h5>
+              <select className="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
                 {listaControl}
               </select>
               <h4 className="H4-form">{this.state.tech5}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Area Incidencia</h5>
-              <select className="styled-select rounded" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
+              <h5 className="H5-form">Área incidencia</h5>
+              <select className="selectToForm" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
                 {listaAreas}
               </select>
               <h4 className="H4-form">{this.state.tech3}</h4>
@@ -179,24 +180,29 @@ class Select extends React.Component {
 
 function MyDatePicker() {
   return (
-    <DayPickerInput
-      dayPickerProps={{
-        month: new Date(2018, 10),
-        showWeekNumbers: true,
-        todayButton: 'Today',
-      }}
-    />
+    <input className="selectDateTime" type="datetime-local" id="example-date-input" />
   );
 }
 
 function MyTextArea() {
   return (
 
-    <div className="abarcadoTextArea">
+    <div className="container">
 
-      <div className="form-group blue-border-focus">
-        <label for="exampleFormControlTextarea5">Inserte La Descripcion De La Incidencia</label>
-        <textarea className="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+      <div className="row">
+
+        <div className="col-xs-12 col-md-12">
+
+          <div className="Container-div">
+
+            <div className="form-group blue-border-focus">
+              <label for="exampleFormControlTextarea5">Inserte la descripción de la incidencia</label>
+              <textarea className="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -211,7 +217,7 @@ function MyNotificationButton() {
 
     <div className="abarcadoBotonNotificar">
 
-      <Button className="abarcadoBotonNotificar" color="primary" >Notificar</Button>
+      <Button className="abarcadoBotonNotificar"  >Notificar</Button>
 
     </div>
 
