@@ -13,16 +13,12 @@ class App extends Component {
   render() {
     const { children } = this.props;
     return (
-<<<<<<< HEAD
-      <div>
-        <Header />
-=======
       <body>
-      <div className="container" id="div_ancho_completo">
->>>>>>> 68400fb5f57d87c839a0c34f546572fe8fc2d998
-        <Contenedor body={children}/>
-        <Footer />
-      </div>
+        <div>
+          <Header />
+          <Contenedor body={children} />
+          <Footer />
+        </div>
       </body>
     );
   }
