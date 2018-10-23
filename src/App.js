@@ -11,10 +11,11 @@ class App extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <body>
+      <div className="container" id="div_ancho_completo">
         <Contenedor body={children}/>
       </div>
-
+      </body>
     );
   }
 }
