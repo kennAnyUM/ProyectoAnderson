@@ -4,6 +4,7 @@ import logo from './user.png';
 import { Link } from "react-router-dom";
 
 class registroColaborador extends Component {
+    
     render() {
         return (
             <div>
