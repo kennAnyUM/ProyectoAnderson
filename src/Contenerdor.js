@@ -12,7 +12,6 @@ class Content extends Component {
 
     return (
       <body>
-        <Header />
         <div>
           {body}
         </div>
