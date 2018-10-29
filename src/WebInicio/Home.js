@@ -10,9 +10,6 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        <div >
-          <Navigation />
-        </div>
         <div className="container">
           <div className="row mt-4">
             <div className="col mt-4 ">

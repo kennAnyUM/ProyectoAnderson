@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import './Registro.css';
 import logo from './user.png';
 import { Link } from "react-router-dom";
+import Background from '../components/Background';
 
 class registroColaborador extends Component {
-    
+
     render() {
         return (
-            <div>
+            <div className="App">
+            <br /><br />
+                <Background/>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-4 col-sm-4 col-lg-4">
