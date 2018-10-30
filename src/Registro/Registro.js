@@ -8,6 +8,7 @@ class registroColaborador extends Component {
     render() {
         return (
             <div>
+                <br/><br/><br/>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-4 col-sm-4 col-lg-4">
@@ -67,10 +68,15 @@ class registroColaborador extends Component {
                                 <div className="form-group">
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
                                     <Link to="/incidentes"><button>Ingresar</button></Link>
+                                    
                                 </div>
                             </form>
+                           
                         </div>
+                    
                     </div>
+
+                        <br/><br/><br/>
                 </div>
             </div>
         )

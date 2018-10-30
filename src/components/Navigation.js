@@ -37,7 +37,7 @@ class navigatiom extends React.Component {
           </ul>
           <form className="form-inline my-2 my-lg-0">
             <a className="mr-sm-4" type="text" >Maria Jose Brenes</a>
-            <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Iniciar Sesion</button>
+            <button className="btn btn-outline-primary my-2 my-sm-0" type="submit">Cerrar Sesion</button>
           </form>
         </div>
       </nav>
