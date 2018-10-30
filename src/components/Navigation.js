@@ -22,8 +22,8 @@ class navigatiom extends React.Component {
             <li className="nav-item">
               <Link to="/InsertarIncidencia"><a className="nav-link" >Crear Incidencia</a></Link>
             </li>
-            <li className="nav-item dropdown">
 
+            <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuracion</a>
 
@@ -40,14 +40,18 @@ class navigatiom extends React.Component {
           </ul>
 
           <form className="form-inline my-2 my-lg-0 dropdown">
+        
+         
+
             <button className="btn btn-outline-primary my-2 my-sm-0 dropdown-toggle" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><PersonIcon /> Maria Jose Brenes</button>
 
             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#"><SettingsIcon /> Perfil</a>
+              <Link to="/AjustePerfil"> <a className="dropdown-item" href="#"><SettingsIcon /> Perfil</a></Link>
               <div className="dropdown-divider"></div>
-              <Link to="/Registro"> <a className="dropdown-item" href="#"><ExitIcon /> Cerrar sesion</a></Link>
+              <Link to="/"> <a className="dropdown-item" href="#"><ExitIcon /> Cerrar sesion</a></Link>
             </div>
+
           </form>
 
         </div>
