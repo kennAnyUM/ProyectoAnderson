@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import './Registro.css';
 import logo from './user.png';
 import { Link } from "react-router-dom";
+import Background from '../components/Background';
 
 class registroColaborador extends Component {
+
     render() {
         return (
-            <div>
-                <header className="App-header-registro">
-                    <p>Registro Incidencia</p>
-                </header>
+  
+            <div className="App">
+            <br /><br />
+                <Background/>
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-4 col-sm-4 col-lg-4">
@@ -69,10 +71,15 @@ class registroColaborador extends Component {
                                 <div className="form-group">
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
                                     <Link to="/incidentes"><button>Ingresar</button></Link>
+                                    
                                 </div>
                             </form>
+                           
                         </div>
+                    
                     </div>
+
+                        <br/><br/><br/>
                 </div>
             </div>
         )

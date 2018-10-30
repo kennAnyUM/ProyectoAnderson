@@ -1,0 +1,10 @@
+#footer-main{
+    position: fixed;
+    background-color: #eeeeee;
+    color: #808080;
+    font-size: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+}

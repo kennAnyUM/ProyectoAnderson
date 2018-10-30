@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
+import Header from './components/Navigation';
 
 class Content extends Component {
   static propTypes = {
@@ -10,9 +11,12 @@ class Content extends Component {
     const { body } = this.props;
 
     return (
-      <div>
-          { body }
-      </div>
+      <body>
+        <div>
+          {body}
+        </div>
+      </body>
+
     );
   }
 }

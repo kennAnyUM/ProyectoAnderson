@@ -1,62 +1,58 @@
-import React from 'react';
 import './estilo.css';
-import Foto from './FotoPerfil';
+import React from 'react';
+import { Link } from "react-router-dom";
+import PersonIcon from '@material-ui/icons/Person';
+import ExitIcon from '@material-ui/icons/Input';
+import SettingsIcon from '@material-ui/icons/Settings';
 
-class Dropdown extends React.Component {
-    constructor() {
-        super();
+class navigatiom extends React.Component {
+  render() {
+    return (
+      <nav className="container-fluid navbar navbar-expand-lg navbar-light" id="nav">
+        <a className="navbar-brand" href="#"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} width="35" height="35"></img></a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-        this.state = {
-            displayMenu: false,
-        };
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">Inicio<span className="sr-only">(current)</span></a>
+            </li>
+            <li className="nav-item">
+              <Link to="/InsertarIncidencia"><a className="nav-link" >Crear Incidencia</a></Link>
+            </li>
+            <li className="nav-item dropdown">
 
-        this.showDropdownMenu = this.showDropdownMenu.bind(this);
-        this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Configuracion</a>
 
-    };
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="#">Action</a>
+                <a className="dropdown-item" href="#">Another action</a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#"></a>
+            </li>
+          </ul>
 
-    showDropdownMenu(event) {
-        event.preventDefault();
-        this.setState({ displayMenu: true }, () => {
-            document.addEventListener('click', this.hideDropdownMenu);
-        });
-    }
+          <form className="form-inline my-2 my-lg-0 dropdown">
+            <button className="btn btn-outline-primary my-2 my-sm-0 dropdown-toggle" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><PersonIcon /> Maria Jose Brenes</button>
 
-    hideDropdownMenu() {
-        this.setState({ displayMenu: false }, () => {
-            document.removeEventListener('click', this.hideDropdownMenu);
-        });
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a className="dropdown-item" href="#"><SettingsIcon /> Perfil</a>
+              <div className="dropdown-divider"></div>
+              <Link to="/Registro"> <a className="dropdown-item" href="#"><ExitIcon /> Cerrar sesion</a></Link>
+            </div>
+          </form>
 
-    }
-
-    render() {
-        return (
-            <nav>
-                <div className="dropdown">
-                    <a className="button" onClick={this.showDropdownMenu}><img src={require("./imagenes/menu2.png")} width="30px" height="30px" ></img> </a>
-                    <a className= "perfil"><Foto/></a>
-                    <p className="name">Maria Jose Brenes</p>
-                    <p className="mail">mariaJB1996@impesa.net</p>
-                    {this.state.displayMenu ? (
-                        <ul>
-                           
-                            <li><a href="#Manage Pages">Manage Pages</a></li>
-                            <li><a href="#Create Ads">Create Ads</a></li>
-                            <li><a href="#Manage Ads">Manage Ads</a></li>
-                            <li><a href="#Activity Logs">Activity Logs</a></li>
-                            <li><a href="#Setting"><img src={require("./imagenes/setting.png")} width="30px" height="30px" ></img>    Setting</a></li>
-                            <li><a href="#Log Out"><img src={require("./imagenes/log-out.png")} width="25px" height="25px" ></img>  Log Out</a></li>
-                        </ul>
-                    ) :
-                        (
-                            null
-                        )
-                    }
-
-                </div>
-            </nav>
-        );
-    }
+        </div>
+      </nav >
+    );
+  }
 }
-
-export default Dropdown;
+export default navigatiom;
