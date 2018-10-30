@@ -8,14 +8,10 @@ class registroColaborador extends Component {
 
     render() {
         return (
-<<<<<<< HEAD
-            <div>
-                <br/><br/><br/>
-=======
+  
             <div className="App">
             <br /><br />
                 <Background/>
->>>>>>> 18ef5e40595ed90563b140d732512bc6a55b73fe
                 <div className="container">
                     <div className="row">
                         <div className="col-xs-4 col-sm-4 col-lg-4">
