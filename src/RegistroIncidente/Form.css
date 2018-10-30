@@ -15,7 +15,7 @@ color: black;
 
 }
 
-.abarcadoTextArea{
+.abarcadoTextArea{  
 
   align-items: center;
   text-align: center;
@@ -35,11 +35,14 @@ color: black;
 margin-left: 240px;
 margin-top: -7px;
 text-align: center;
-background: rgb(50, 29, 234);
-height: 50px;
-width: 100px;
+height: 45px;
+width: 89px;
+background-color: #1DCFEA;
 
+}
 
+.abarcadoBotonNotificar:hover{
+  background: #ACCDFF;
 }
 
 .selectToForm{

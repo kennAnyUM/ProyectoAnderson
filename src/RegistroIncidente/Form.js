@@ -101,8 +101,8 @@ class Select extends React.Component {
       <option value={control}>{control}</option>
     );
 
-
     return (
+
       <div className="container">
 
         <div className="row">
@@ -134,7 +134,7 @@ class Select extends React.Component {
             <div className="Container-div">
 
               <h5 className="H5-form">Tecnología afectada</h5>
-              <select className="selectToForm" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
+              <select className="selectToForm" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
                 {listaTecno}
               </select>
               <h4 className="H4-form">{this.state.tech4}</h4>
@@ -215,13 +215,31 @@ function MyTextArea() {
 function MyNotificationButton() {
   return (
 
-    <div className="abarcadoBotonNotificar">
+    <div className="container">
 
-      <Button className="abarcadoBotonNotificar"  >Notificar</Button>
+    <div className="row">
+
+      <div className="col-xs-3 col-md-3"></div>
+      
+      <div className="col-xs-3 col-md-3"></div>
+
+      <div className="col-xs-1 col-md-1">
+
+        <div className="Container-div">
+
+          <div >
+            <Button className="abarcadoBotonNotificar" rounded gradient="purple">Notificar</Button>
+          </div>
+
+        </div>
+
+      </div>
+
+      
 
     </div>
 
-
+  </div>
   );
 }
 
