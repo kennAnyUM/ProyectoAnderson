@@ -10,6 +10,8 @@ class Form extends React.Component {
   render() {
     return (
       <form>
+        <br></br>
+        <br></br>
         <fieldset className="fields">
           <header className="App-header">
             <p>Insertar Incidencia</p>
@@ -111,19 +113,19 @@ class Select extends React.Component {
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Tipo incidencia</h5>
-              <select className="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
-                {listaIncidencias}
-              </select>
-              <h4 className="H4-form">{this.state.tech}</h4>
-
-              <br></br>
-
-              <h5 className="H5-form">Impacto incidencia</h5>
+              <h5 className="H5-form">Impacto incidencia *</h5>
               <select className="selectToForm" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
                 {listaImpacto}
               </select>
               <h4 className="H4-form">{this.state.tech2}</h4>
+
+              <br></br>
+
+              <h5 className="H5-form">Tecnología afectada *</h5>
+              <select className="selectToForm" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
+                {listaTecno}
+              </select>
+              <h4 className="H4-form">{this.state.tech4}</h4>
 
             </div>
 
@@ -133,15 +135,15 @@ class Select extends React.Component {
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Tecnología afectada</h5>
-              <select className="selectToForm" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
-                {listaTecno}
+              <h5 className="H5-form">Tipo incidencia *</h5>
+              <select className="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
+                {listaIncidencias}
               </select>
-              <h4 className="H4-form">{this.state.tech4}</h4>
+              <h4 className="H4-form">{this.state.tech}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Fecha de descubrimiento</h5>
+              <h5 className="H5-form">Fecha de descubrimiento *</h5>
               {MyDatePicker()}
 
             </div>
@@ -152,19 +154,19 @@ class Select extends React.Component {
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Grado de control</h5>
-              <select className="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
-                {listaControl}
-              </select>
-              <h4 className="H4-form">{this.state.tech5}</h4>
-
-              <br></br>
-
-              <h5 className="H5-form">Área incidencia</h5>
+              <h5 className="H5-form">Área incidencia *</h5>
               <select className="selectToForm" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
                 {listaAreas}
               </select>
               <h4 className="H4-form">{this.state.tech3}</h4>
+
+              <br></br>
+
+              <h5 className="H5-form">Grado de control *</h5>
+              <select className="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
+                {listaControl}
+              </select>
+              <h4 className="H4-form">{this.state.tech5}</h4>
 
             </div>
 
