@@ -10,7 +10,7 @@ class Background extends Component {
     }
 
     componentWillMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get(`https://localhost:44384/api/Login`)
             .then(res => {
                 const persons = res.data;
                 this.setState({ persons });
@@ -20,7 +20,7 @@ class Background extends Component {
     render() {
         return (
             <ul>
-                {this.state.persons.map(person => <li>{person.name}</li>)}
+                {this.state.persons.map(person => <li>{person.correo}</li>)}
             </ul>
         );
     }
