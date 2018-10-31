@@ -8,6 +8,7 @@ class registroColaborador extends Component {
 
     render() {
         return (
+  
             <div className="App">
             <br /><br />
             <br /><br />
@@ -72,11 +73,20 @@ class registroColaborador extends Component {
                                 </div>
                                 <div className="form-group">
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
+<<<<<<< HEAD
                                     <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
+=======
+                                    <Link to="/incidentes"><button>Ingresar</button></Link>
+                                    
+>>>>>>> 34f02720ffe4e1a739b4f20815ce1462e89b6042
                                 </div>
                             </form>
+                           
                         </div>
+                    
                     </div>
+
+                        <br/><br/><br/>
                 </div>
             </div>
         )

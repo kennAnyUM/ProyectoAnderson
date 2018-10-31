@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Home.css';
 import TableIncedents from '../components/table.js';
 
-import Navigation from '../components/Navigation';
-
 
 class Home extends Component {
 
@@ -19,7 +17,6 @@ class Home extends Component {
 
           </div>
         </div>
-
       </div>
     );
   }
