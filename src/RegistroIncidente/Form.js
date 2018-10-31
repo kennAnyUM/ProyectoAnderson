@@ -12,16 +12,17 @@ class Form extends React.Component {
       <form>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>  
         <fieldset className="fields">
-          <header className="App-header">
-            <p>Insertar Incidencia</p>
-          </header>
           <div>
             <Select />
             {MyTextArea()}
             {MyNotificationButton()}
           </div>
         </fieldset>
+        <br></br>
+        <br></br>  
       </form>
     )
   }
