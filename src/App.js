@@ -13,12 +13,11 @@ class App extends Component {
     const { children } = this.props;
     return (
       <body>
-         <Navigation />
-         
-        <div className="container" id="div_ancho_completo">
-        
+        <Navigation />
+        <div className="container-fluid" id="div_ancho_completo">
+          <Contenedor body={children}/>
         </div>
-       <Footer/>
+        <Footer />
       </body>
     );
   }
