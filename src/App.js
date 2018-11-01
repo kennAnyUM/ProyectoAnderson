@@ -3,7 +3,7 @@ import './App.css';
 import PropTypes from 'prop-types';
 import Contenedor from './Contenerdor';
 import Footer from './components/Footer';
-import Navigation from './components/Navigation';
+import Navigation from './Administrator/Block_User';
 
 class App extends Component {
   static propTypes = {
@@ -14,12 +14,7 @@ class App extends Component {
     return (
       <body>
          <Navigation />
-        <div className="container-fluid" id="div_ancho_completo">
-         
-          <Contenedor body={children} />
-        </div>
        
-        <Footer />
       </body>
     );
   }
