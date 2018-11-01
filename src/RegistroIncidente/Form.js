@@ -1,7 +1,9 @@
 import React from 'react';
-import './Form.css';
+
 import 'react-day-picker/lib/style.css';
 import { Button } from 'reactstrap';
+import Navigation from '../components/Navigation';
+
 
 class Form extends React.Component {
   constructor(props) {
@@ -9,20 +11,27 @@ class Form extends React.Component {
   }
   render() {
     return (
-      <form>
-        <br></br>
-        <br></br>
-        <fieldset className="fields">
-          <header className="App-header">
-            <p>Insertar Incidencia</p>
-          </header>
-          <div>
-            <Select />
-            {MyTextArea()}
-            {MyNotificationButton()}
-          </div>
-        </fieldset>
-      </form>
+      <div className="container-fluid">
+        <Navigation />
+        <form className="container" >
+
+          <fieldset className="fields">
+            <header className="App-header">
+              <br /><br /><br />
+              <h3 className="mt-4">Insertar Incidencia</h3>
+            </header>
+            <div>
+              <Select />
+              {MyTextArea()}
+              <div class="pagination justify-content-end">
+                <button class="btn btn-light  " type="submit">Cancelar</button>
+                <button class="btn btn-primary" type="submit">Notificar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
     )
   }
 }
@@ -105,24 +114,24 @@ class Select extends React.Component {
 
     return (
 
-      <div className="container">
+      <div className="container mt-">
 
         <div className="row">
-        <br/><br/><br/>       <br/><br/><br/>
+          <br /><br /><br />       <br /><br /><br />
           <div className="col-xs-4 col-md-4">
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Impacto incidencia *</h5>
-              <select className="selectToForm" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
+              <label>Impacto incidencia *</label>
+              <select className="form-control" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
                 {listaImpacto}
               </select>
               <h4 className="H4-form">{this.state.tech2}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Tecnología afectada *</h5>
-              <select className="selectToForm" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
+              <label>Tecnología afectada *</label>
+              <select className="form-control" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
                 {listaTecno}
               </select>
               <h4 className="H4-form">{this.state.tech4}</h4>
@@ -135,15 +144,15 @@ class Select extends React.Component {
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Tipo incidencia *</h5>
-              <select className="selectToForm" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
+              <label>Tipo incidencia *</label>
+              <select className="form-control" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
                 {listaIncidencias}
               </select>
               <h4 className="H4-form">{this.state.tech}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Fecha de descubrimiento *</h5>
+              <label>Fecha de descubrimiento *</label>
               {MyDatePicker()}
 
             </div>
@@ -154,16 +163,16 @@ class Select extends React.Component {
 
             <div className="Container-div">
 
-              <h5 className="H5-form">Área incidencia *</h5>
-              <select className="selectToForm" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
+              <label>Área incidencia *</label>
+              <select className="form-control" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
                 {listaAreas}
               </select>
               <h4 className="H4-form">{this.state.tech3}</h4>
 
               <br></br>
 
-              <h5 className="H5-form">Grado de control *</h5>
-              <select className="selectToForm" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
+              <label>Grado de control *</label>
+              <select className="form-control" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
                 {listaControl}
               </select>
               <h4 className="H4-form">{this.state.tech5}</h4>
@@ -182,7 +191,7 @@ class Select extends React.Component {
 
 function MyDatePicker() {
   return (
-    <input className="selectDateTime" type="datetime-local" id="example-date-input" />
+    <input className="form-control" type="datetime-local" id="example-date-input" />
   );
 }
 
@@ -213,38 +222,5 @@ function MyTextArea() {
 
   );
 }
-
-function MyNotificationButton() {
-  return (
-
-    <div className="container">
-
-      <div className="row">
-
-        <div className="col-xs-3 col-md-3"></div>
-
-        <div className="col-xs-3 col-md-3"></div>
-
-        <div className="col-xs-1 col-md-1">
-
-          <div className="Container-div">
-
-            <div >
-              <Button className="abarcadoBotonNotificar" rounded gradient="purple">Notificar</Button>
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-      </div>
-
-    </div>
-  );
-}
-
-
 
 export default Form;

@@ -24,7 +24,7 @@ class IncidentCard extends Component {
     })
 
     return (
-      <table id="tableInci" class="table table-bordered table-light table-striped">
+      <table id="tableInci" class="table table-bordered table-light table-striped mt-4">
         <thead className="table-dark" >
           <tr >
             <th>Impacto

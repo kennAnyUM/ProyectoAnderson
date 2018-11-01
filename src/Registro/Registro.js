@@ -8,21 +8,24 @@ class registroColaborador extends Component {
 
     render() {
         return (
-  
+
             <div className="App">
-            <br /><br />
-            <br /><br />
-            <br /><br />
-            <br /><br />
-                <Background/>
+                <br /><br />
+
+                <Background />
                 <div className="container">
+
                     <div className="row">
+                        <div className="col-xs-4 col-sm-4 col-lg-1">
+                        </div>
+
                         <div className="col-xs-4 col-sm-4 col-lg-4">
+
+                            <h3>Registrarse</h3><br />
                             <form>
                                 <div className="form-group">
                                     <label for="exampleInputEmail1">Correo electronico</label>
                                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                                    <small id="emailHelp" className="form-text text-muted">Ejemplo@impesa.net.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="exampleInputPassword1">Nombre</label>
@@ -37,14 +40,16 @@ class registroColaborador extends Component {
                                     <input type="text" class="form-control" id="segundoApellidoUsuario" placeholder="Segundo apellido"></input>
                                 </div>
                                 <fieldset className="form-group">
-                                    <legend>Tipo usuario</legend>
-                                    <div className="form-check">
-                                        <label className="form-check-label">
-                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked></input>Interno</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <label className="form-check-label">
-                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"></input>Externo</label>
+                                    <label for="TipoUsuario">Tipo de usuario</label>
+                                    <div className="form-row">
+                                        <div className="form-check mr-4 ">
+                                            <label className="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked></input>Interno</label>
+                                        </div>
+                                        <div className="form-check">
+                                            <label className="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"></input>Externo</label>
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <div className="form-group">
@@ -59,34 +64,29 @@ class registroColaborador extends Component {
                                 <button className="btn btn-primary">Registrar</button>
                             </form>
                         </div>
-                        <div className="col-xs-4 col-sm-4 col-lg-4">
+                        <div className="col-xs-4 col-sm-4 col-lg-2">
                         </div>
                         <div className="col-xs-4 col-sm-4 col-lg-4">
                             <form>
                                 <div className="form-group">
-                                    <label>Ya posee una cuenta?</label><br></br>
-                                    <img src={logo} alt="logo" width="200px" /><br></br>
+                                    <h3>Ya posee una cuenta?</h3><br />
                                 </div>
                                 <div className="form-group">
                                     <label for="emailLogin">Correo electronico</label>
                                     <input type="email" className="form-control" id="emailLogin" aria-describedby="correoLogin" placeholder="Enter email"></input>
                                 </div>
                                 <div className="form-group">
+                                    <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
-<<<<<<< HEAD
                                     <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
-=======
-                                    <Link to="/incidentes"><button>Ingresar</button></Link>
-                                    
->>>>>>> 34f02720ffe4e1a739b4f20815ce1462e89b6042
                                 </div>
                             </form>
-                           
+
                         </div>
-                    
+
                     </div>
 
-                        <br/><br/><br/>
+                    <br /><br /><br />
                 </div>
             </div>
         )
