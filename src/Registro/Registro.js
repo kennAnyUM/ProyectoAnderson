@@ -79,6 +79,8 @@ class registroColaborador extends Component {
                                     <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
                                     <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
+                                    <br/>
+                                    <Link to="/getAdmin"><button className="btn btn-primary">Admin</button></Link>
                                 </div>
                             </form>
 

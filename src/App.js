@@ -15,8 +15,7 @@ class App extends Component {
       <body>
           
         <div className="container-fluid" id="div_ancho_completo">
-         
-          <Contenedor body={children} />
+          <Contenedor body={children}/>
         </div>
        
         <Footer />
