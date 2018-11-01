@@ -1,0 +1,22 @@
+#table_id{
+    background-color:#eeeeee;
+}
+#myInput{
+    position: relative;
+    left: -37%;
+    border-radius: 10px;
+    width: 25%;
+    margin: 1% auto;
+    float: none;
+}
+#main_div{
+    background-color:#eeeeee;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1% auto;
+    float: none;
+}
+.size{
+    
+    width: 10%;
+}

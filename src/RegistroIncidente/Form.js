@@ -12,16 +12,17 @@ class Form extends React.Component {
       <form>
         <br></br>
         <br></br>
+        <br></br>
+        <br></br>  
         <fieldset className="fields">
-          <header className="App-header">
-            <p>Insertar Incidencia</p>
-          </header>
           <div>
             <Select />
             {MyTextArea()}
             {MyNotificationButton()}
           </div>
         </fieldset>
+        <br></br>
+        <br></br>  
       </form>
     )
   }
@@ -108,7 +109,7 @@ class Select extends React.Component {
       <div className="container">
 
         <div className="row">
-
+        <br/><br/><br/>       <br/><br/><br/>
           <div className="col-xs-4 col-md-4">
 
             <div className="Container-div">
@@ -219,29 +220,29 @@ function MyNotificationButton() {
 
     <div className="container">
 
-    <div className="row">
+      <div className="row">
 
-      <div className="col-xs-3 col-md-3"></div>
-      
-      <div className="col-xs-3 col-md-3"></div>
+        <div className="col-xs-3 col-md-3"></div>
 
-      <div className="col-xs-1 col-md-1">
+        <div className="col-xs-3 col-md-3"></div>
 
-        <div className="Container-div">
+        <div className="col-xs-1 col-md-1">
 
-          <div >
-            <Button className="abarcadoBotonNotificar" rounded gradient="purple">Notificar</Button>
+          <div className="Container-div">
+
+            <div >
+              <Button className="abarcadoBotonNotificar" rounded gradient="purple">Notificar</Button>
+            </div>
+
           </div>
 
         </div>
 
+
+
       </div>
 
-      
-
     </div>
-
-  </div>
   );
 }
 
