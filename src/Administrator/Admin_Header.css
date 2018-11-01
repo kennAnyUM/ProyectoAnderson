@@ -1,7 +1,8 @@
 #nav{
     position: fixed;
     left: 50%;
-    transform: translatex(-50%);
+    top: 0%;
+    transform: translate(-50%,-0%);
     background-color: #eeeeee;
-    z-index:99;
+   /* z-index:99;*/
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import './Block_User.css';
+import Navigation from '../Administrator/Admin_Header';
 
 class navigatiom extends React.Component {
 
@@ -29,8 +30,12 @@ class navigatiom extends React.Component {
     render() {
 
         return (
-
             <div className="container ">
+            <Navigation/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
                 <input className="form-control" id="myInput" type="text" placeholder="Search.."></input>
                 <div className="container table-responsive " id="main_div">
                     <table className="table table-hover table-condensed " id="table_id">
@@ -43,6 +48,84 @@ class navigatiom extends React.Component {
                             </tr>
                         </thead>
                         <tbody id="myTable">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td><button >Bloquear</button></td>
+                            </tr>
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Mark</td>

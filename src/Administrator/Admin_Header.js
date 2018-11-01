@@ -1,4 +1,4 @@
-import './estilo.css';
+import './Admin_Header.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 import PersonIcon from '@material-ui/icons/Person';
@@ -9,7 +9,7 @@ class AdminNavigation extends React.Component {
   render() {
     return (
       <nav className="container-fluid navbar navbar-expand-lg navbar-light" id="nav">
-        <a className="navbar-brand" href="#"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} width="35" height="35"></img></a>
+        <a className="navbar-brand" href="#"><img src={require("../components/imagenesImpesa/ICONO ANDERSON1.png")} width="35" height="35"></img></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -28,7 +28,7 @@ class AdminNavigation extends React.Component {
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administar</a>
 
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">Bloquear Usuarios</a>
+              <Link to="/BlockUser"><a className="dropdown-item" href="#">Bloquear Usuarios</a></Link>
                 <a className="dropdown-item" href="#">Desbloquear Usuarios</a>
                 <div className="dropdown-divider"></div>
                 <a className="dropdown-item" href="#">Aceptar Usuarios</a>
