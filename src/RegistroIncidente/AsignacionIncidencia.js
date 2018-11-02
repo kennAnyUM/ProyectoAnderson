@@ -103,11 +103,11 @@ function FilterUser() {
             <div >
 
               <label for="exampleFormControl">Filtrar Incidencia</label>
-
-              <label class="checkbox-inline"> <input type="checkbox" value=""/>Bases de Datos</label>
-              <label class="checkbox-inline"> <input type="checkbox" value=""/>Redes</label>
-              <label class="checkbox-inline"> <input type="checkbox" value=""/>Desarrollo</label>
-              <label class="checkbox-inline"> <input type="checkbox" value=""/>Infraestructura</label>
+              <br></br>
+              <label class="checkbox-inline"> <input type="checkbox" value=""/>Bases de Datos&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value=""/>Redes&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value=""/>Desarrollo&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value=""/>Infraestructura&nbsp;&nbsp;</label>
 
             </div>
 
