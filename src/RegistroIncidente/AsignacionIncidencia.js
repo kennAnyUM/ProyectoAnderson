@@ -46,6 +46,7 @@ class ColaboradorTabla extends React.Component {
     const colaboradorCard = this.state.colaboradores.map((colaborador) => {
       return (
         <tr>
+          <td><input type="checkbox" value=""/></td>
           <th scope="row">{colaborador.area}</th>
           <td>{colaborador.primernombre}</td>
           <td>{colaborador.primerapellido}</td>
@@ -66,6 +67,8 @@ class ColaboradorTabla extends React.Component {
       <table id="tableColab" class="table table-bordered table-light table-striped mt-4">
          <thead className="table-dark" >
           <tr >
+            <th>Asignar
+            </th>
             <th>Area Especializacion
             </th>
             <th >Primer Nombre
