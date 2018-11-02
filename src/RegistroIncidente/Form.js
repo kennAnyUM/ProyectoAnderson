@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import 'react-day-picker/lib/style.css';
 import Navigation from '../components/Navigation';
 
@@ -24,7 +24,7 @@ class Form extends React.Component {
               {MyTextArea()}
               <div class="pagination justify-content-end">
                 <button class="btn btn-light  " type="submit">Cancelar</button>
-                <button class="btn btn-primary" type="submit">Notificar</button>
+                <Link to="/AsignacionIncidencia"><button className="btn btn-primary">Asignar</button></Link>
               </div>
             </div>
           </fieldset>
