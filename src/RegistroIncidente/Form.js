@@ -1,7 +1,6 @@
 import React from 'react';
 
 import 'react-day-picker/lib/style.css';
-import { Button } from 'reactstrap';
 import Navigation from '../components/Navigation';
 
 
