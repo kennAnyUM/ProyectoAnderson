@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import { colaboradores } from '../components/bd/colaborador.json';
 
 
 class AsignacionIncidencia extends React.Component {
@@ -19,6 +20,7 @@ class AsignacionIncidencia extends React.Component {
             </header>
             <div>
               {FilterUser()}
+              <ColaboradorTabla />
               <div class="pagination justify-content-end">
                 <button class="btn btn-light  " type="submit">Cancelar</button>
                 <button class="btn btn-primary" type="submit">Notificar</button>
@@ -29,6 +31,61 @@ class AsignacionIncidencia extends React.Component {
 
       </div>
     )
+  }
+}
+
+class ColaboradorTabla extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      colaboradores
+    }
+  }
+
+  render() {
+    const colaboradorCard = this.state.colaboradores.map((colaborador) => {
+      return (
+        <tr>
+          <th scope="row">{colaborador.area}</th>
+          <td>{colaborador.primernombre}</td>
+          <td>{colaborador.primerapellido}</td>
+          <td>{colaborador.correo}</td>
+        </tr>
+
+      )
+    })
+
+    return (
+
+      <div className="container">
+       <div className="row">
+        <div className="col-xs-12 col-md-12">
+          <div className="Container-div">
+          </div>
+
+      <table id="tableColab" class="table table-bordered table-light table-striped mt-4">
+         <thead className="table-dark" >
+          <tr >
+            <th>Area Especializacion
+            </th>
+            <th >Primer Nombre
+            </th>
+            <th >Primer Apellido
+            </th>
+            <th >Correo Electronico
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {colaboradorCard}
+        </tbody>
+      </table>
+
+          </div>
+       </div>
+      </div>
+
+    );
   }
 }
 
