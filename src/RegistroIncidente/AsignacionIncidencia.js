@@ -134,7 +134,7 @@ function ShowIncident() {
 
       <div className="row">
 
-        <div className="col-xs-12 col-md-12">
+        <div className="col-xs-6 col-md-6">
 
           <div className="Container-div">
 
