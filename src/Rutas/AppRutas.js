@@ -10,7 +10,7 @@ import AsignacionIncidencia from '../RegistroIncidente/AsignacionIncidencia';
 import Configuracion from '../configuracion/Perfil';
 import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
-import sidebar from '../components/SidebarAdmin';
+import AddArea from  '../Administrator/addArea';
 
 
 const AppRutas = () =>
@@ -23,7 +23,7 @@ const AppRutas = () =>
       <Route exact path="/getAdmin" component={GetAdmin} />
       <Route exact path="/BlockUser" component={BlockUser} />
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
-      <Route exact path="/sidebar" component={sidebar} />
+      <Route exact path="/AddArea" component={AddArea} />
     </Switch>
 
   </App>;

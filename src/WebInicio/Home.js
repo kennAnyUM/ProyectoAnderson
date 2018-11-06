@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import { incidents } from '../components/bd/incident.json';
 import SearchkIcon from '@material-ui/icons/Search';
 import $ from 'jquery';
+import './Home.css';
 
 
 class Home extends Component {

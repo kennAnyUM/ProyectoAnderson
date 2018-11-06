@@ -29,10 +29,11 @@ class navigatiom extends React.Component {
 
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
               <Link to="/BlockUser">  <a className="dropdown-item" href="#">Bloquear Usuarios</a></Link>
+              <Link to="/BlockUser">  <a className="dropdown-item" href="#">Aceptar Usuarios</a></Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Tecnologías</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Areas</a>
+                <Link to="/BlockUser">   <a className="dropdown-item" href="#">Tecnologías</a></Link>
+                <div className="dropdown-divider"/>
+                <Link to="/AddArea">  <a className="dropdown-item" href="#">Areas</a></Link>
               </div>
             </li>
             <li className="nav-item">
