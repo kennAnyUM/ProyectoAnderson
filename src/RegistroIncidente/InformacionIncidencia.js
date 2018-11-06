@@ -19,8 +19,6 @@ class InformacionIncidencia extends React.Component {
                         <div>
                             <br></br>
                             {BodyInformation()}
-                            <br></br>
-                            <br></br>
                             <div class="pagination justify-content-end">
                                 <button class="btn btn-light  " type="submit">Cancelar</button>
                                 <button class="btn btn-primary" type="submit">Notificar</button>
@@ -51,10 +49,8 @@ function BodyInformation() {
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-                            <br></br>
                             <label>Impacto incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
                             <br></br>
                             <br></br>
                             <label>Tecnologia incidencia</label>
@@ -72,7 +68,6 @@ function BodyInformation() {
                         <div className="form-group blue-border-focus">
                             <label>Tipo incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
                             <br></br>
                             <br></br>
                             <label>Fecha incidencia</label>
@@ -93,10 +88,8 @@ function BodyInformation() {
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-                            <br></br>
                             <label>Area incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
                             <br></br>
                             <br></br>
                             <label>Grado incidencia</label>
