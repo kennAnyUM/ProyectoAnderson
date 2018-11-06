@@ -57,12 +57,13 @@ class registroColaborador extends Component {
 
             <div className="App">
                 <br /><br />
-                <br /><br />
-                <br /><br />
-                <br /><br />
                 <Background />
                 <div className="container">
+
                     <div className="row">
+                        <div className="col-xs-4 col-sm-4 col-lg-1">
+                        </div>
+
                         <div className="col-xs-4 col-sm-4 col-lg-4">
                             <form onSubmit={this.handleSubmit}>
                                 <div className="form-group">
@@ -105,21 +106,23 @@ class registroColaborador extends Component {
                                 <button className="btn btn-primary" type="submit" value="sumit">Registrar</button>
                             </form>
                         </div>
-                        <div className="col-xs-4 col-sm-4 col-lg-4">
+                        <div className="col-xs-4 col-sm-4 col-lg-2">
                         </div>
                         <div className="col-xs-4 col-sm-4 col-lg-4">
                             <form>
                                 <div className="form-group">
-                                    <label>Ya posee una cuenta?</label><br></br>
-                                    <img src={logo} alt="logo" width="200px" /><br></br>
+                                    <h3>Ya posee una cuenta?</h3><br />
                                 </div>
                                 <div className="form-group">
                                     <label for="emailLogin">Correo electronico</label>
                                     <input type="email" className="form-control" id="emailLogin" aria-describedby="correoLogin" placeholder="Enter email"></input>
                                 </div>
                                 <div className="form-group">
+                                    <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
                                     <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
+                                    <br/>
+                                    <Link to="/getAdmin"><button className="btn btn-primary">Admin</button></Link>
                                 </div>
                             </form>
 
