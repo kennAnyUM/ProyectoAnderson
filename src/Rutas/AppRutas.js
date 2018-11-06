@@ -11,6 +11,7 @@ import Configuracion from '../configuracion/Perfil';
 import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
+import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 
 
 const AppRutas = () =>
