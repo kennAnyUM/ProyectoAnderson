@@ -13,6 +13,7 @@ import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 import AddArea from  '../Administrator/addArea';
+import ForgotPass from  '../WebInicio/Recovery';
 
 
 const AppRutas = () =>
@@ -26,7 +27,7 @@ const AppRutas = () =>
       <Route exact path="/BlockUser" component={BlockUser} />
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
       <Route exact path="/AddArea" component={AddArea} />
-      <Route exact path="/sidebar" component={sidebar} />
+      <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
     </Switch>
 

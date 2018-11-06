@@ -51,11 +51,10 @@ class AddArea extends React.Component {
                 <div className="container p-3 mt-4 ">
 
 
-                    <div class="btn-group " id="btnMenu">
-                        <a href="#" class="btn btn-primary">Inicio</a>
-                        <a href="#" class="btn btn-primary">Historia</a>
-                        <a href="#" class="btn btn-primary">Presente</a>
-                        <a href="#" class="btn btn-primary">Nosotros</a>
+                    <div class="btn-group  btn-block" id="btnMenu">
+                        <a href="#" class="btn btn-primary">Agregar</a>
+                        <a href="#" class="btn btn-primary">Eliminar</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
                     </div>
 
 
@@ -64,20 +63,7 @@ class AddArea extends React.Component {
 
 
                 <div className="container table-responsive " id="main_div">
-                    <table className="table table-hover table-condensed " id="table_id">
-                        <thead>
-                            <tr>
-                                <th className="size" scope="col">Nombre</th>
-                                <th className="size" scope="col">apellido</th>
-                                <th className="size" scope="col">Correo</th>
-                                <th className="size" scope="col">Área</th>
-                                <th className="size" scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody id="myTable">
-
-                        </tbody>
-                    </table>
+                   
                 </div>
             </div>
         );
