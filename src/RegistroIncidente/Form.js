@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { Link } from "react-router-dom";
+>>>>>>> a40340fb35bb2fd6cb8161ad4ecda1dd6e7c6581
 import 'react-day-picker/lib/style.css';
 import Navigation from '../components/Navigation';
 
