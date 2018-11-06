@@ -19,10 +19,13 @@ class InformacionIncidencia extends React.Component {
                         <div>
                             <br></br>
                             {BodyInformation()}
+<<<<<<< HEAD
                          
+=======
+>>>>>>> 6852d1115373bba6eb7a8509d2eddbe0dfac01df
                             <div class="pagination justify-content-end">
-                                <button class="btn btn-light  " type="submit">Cancelar</button>
-                                <button class="btn btn-primary" type="submit">Notificar</button>
+                                <button class="btn btn-light  " type="submit">Agregar Pasos</button>
+                                <button class="btn btn-primary" type="submit">Finalizar</button>
                             </div>
                         </div>
                     </fieldset>
@@ -50,12 +53,10 @@ function BodyInformation() {
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-
                             <label>Impacto incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-
                             <label>Tecnologia incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                         </div>
@@ -73,7 +74,6 @@ function BodyInformation() {
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-
                             <label>Fecha incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                         </div>
@@ -92,12 +92,10 @@ function BodyInformation() {
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-
                             <label>Area incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             <br></br>
                             <br></br>
-
                             <label>Grado incidencia</label>
                             <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                         </div>
