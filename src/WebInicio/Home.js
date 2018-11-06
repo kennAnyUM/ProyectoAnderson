@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import { incidents } from '../components/bd/incident.json';
 import SearchkIcon from '@material-ui/icons/Search';
 import $ from 'jquery';
+import './Home.css';
 
 
 class Home extends Component {
@@ -42,7 +43,7 @@ class Home extends Component {
         <div className="container">
           <br /><br /><br /><br />
           <div className="w-auto p-3">
-            <input className="form-control " type="text" id="inputSearch" placeholder="Search.."></input>
+            <input className="form-control " type="text" id="inputSearch" placeholder="Search"></input>
           </div>
           <div className="row ">
             <div className="col  ">

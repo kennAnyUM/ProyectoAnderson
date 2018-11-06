@@ -12,6 +12,7 @@ import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
+import AddArea from  '../Administrator/addArea';
 
 
 const AppRutas = () =>
@@ -24,6 +25,7 @@ const AppRutas = () =>
       <Route exact path="/getAdmin" component={GetAdmin} />
       <Route exact path="/BlockUser" component={BlockUser} />
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
+      <Route exact path="/AddArea" component={AddArea} />
       <Route exact path="/sidebar" component={sidebar} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
     </Switch>

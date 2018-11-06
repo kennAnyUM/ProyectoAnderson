@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import { parties } from '../components/bd/party.json';
 import BlockIcon from '@material-ui/icons/Block';
 
-class navigatiom extends React.Component {
+class AddArea extends React.Component {
 
     constructor(props) {
         super();
@@ -26,17 +26,6 @@ class navigatiom extends React.Component {
     }
 
 
-
-    /*constructor(props) {
-      super(props);
-      this.state = { forecasts: [], loading: true };
-  
-      fetch('api/SampleData/WeatherForecasts')
-        .then(response => response.json())
-        .then(data => {
-          this.setState({ forecasts: data, loading: false });
-        });
-    }*/
     render() {
         const partiesTable = this.state.parties.map((party) => {
             return (
@@ -45,7 +34,7 @@ class navigatiom extends React.Component {
                     <td>{party.apellido}</td>
                     <td>{party.correo}</td>
                     <td>{party.area}</td>
-                    <td><button class="btn btn-danger  " type="submit"><BlockIcon/>  Bloquear</button></td>
+                    <td><button class="btn btn-danger  " type="submit"><BlockIcon />  Bloquear</button></td>
                 </tr>
 
             )
@@ -57,11 +46,23 @@ class navigatiom extends React.Component {
 
                 <br />
                 <br />
-              
 
-                <div className="w-auto p-3 mt-4">
-                <input className="form-control" id="myInput" type="text" placeholder="Search.."></input>
+
+                <div className="container p-3 mt-4 ">
+
+
+                    <div class="btn-group " id="btnMenu">
+                        <a href="#" class="btn btn-primary">Inicio</a>
+                        <a href="#" class="btn btn-primary">Historia</a>
+                        <a href="#" class="btn btn-primary">Presente</a>
+                        <a href="#" class="btn btn-primary">Nosotros</a>
+                    </div>
+
+
+
                 </div>
+
+
                 <div className="container table-responsive " id="main_div">
                     <table className="table table-hover table-condensed " id="table_id">
                         <thead>
@@ -74,15 +75,7 @@ class navigatiom extends React.Component {
                             </tr>
                         </thead>
                         <tbody id="myTable">
-                            {partiesTable}
-                            {/*forecasts.map(forecast =>
-            <tr key={forecast.dateFormatted}>
-              <td>{forecast.dateFormatted}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
-            </tr>
-         )*/}
+
                         </tbody>
                     </table>
                 </div>
@@ -90,4 +83,4 @@ class navigatiom extends React.Component {
         );
     }
 }
-export default navigatiom;
+export default AddArea;
