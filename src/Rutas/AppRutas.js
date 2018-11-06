@@ -10,6 +10,8 @@ import AsignacionIncidencia from '../RegistroIncidente/AsignacionIncidencia';
 import Configuracion from '../configuracion/Perfil';
 import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
+import sidebar from '../components/SidebarAdmin';
+import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 import AddArea from  '../Administrator/addArea';
 
 
