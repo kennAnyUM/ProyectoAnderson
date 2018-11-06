@@ -20,8 +20,8 @@ class InformacionIncidencia extends React.Component {
                             <br></br>
                             {BodyInformation()}
                             <div class="pagination justify-content-end">
-                                <button class="btn btn-light  " type="submit">Cancelar</button>
-                                <button class="btn btn-primary" type="submit">Notificar</button>
+                                <button class="btn btn-light  " type="submit">Agregar Pasos</button>
+                                <button class="btn btn-primary" type="submit">Finalizar</button>
                             </div>
                         </div>
                     </fieldset>
