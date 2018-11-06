@@ -42,7 +42,7 @@ class Home extends Component {
         <div className="container">
           <br /><br /><br /><br />
           <div className="w-auto p-3">
-            <input className="form-control " type="text" id="inputSearch" placeholder="Search.."></input>
+            <input className="form-control " type="text" id="inputSearch" placeholder="Search"></input>
           </div>
           <div className="row ">
             <div className="col  ">

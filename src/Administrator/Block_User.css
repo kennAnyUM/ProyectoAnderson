@@ -1,6 +1,6 @@
 #table_id{
     display: block;
-    max-height: 370px;
+    max-height: 350px;
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     height:1024px;
