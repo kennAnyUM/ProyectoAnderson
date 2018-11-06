@@ -23,12 +23,9 @@ const AppRutas = () =>
       <Route exact path="/getAdmin" component={GetAdmin} />
       <Route exact path="/BlockUser" component={BlockUser} />
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
-<<<<<<< HEAD
       <Route exact path="/AddArea" component={AddArea} />
-=======
       <Route exact path="/sidebar" component={sidebar} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
->>>>>>> 8eba2b9d0f9f8f74935b24efe0aed17efb26649a
     </Switch>
 
   </App>;
