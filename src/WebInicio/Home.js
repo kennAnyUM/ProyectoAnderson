@@ -4,6 +4,7 @@ import { incidents } from '../components/bd/incident.json';
 import SearchkIcon from '@material-ui/icons/Search';
 import $ from 'jquery';
 import './Home.css';
+import { Link } from "react-router-dom";
 
 
 class Home extends Component {
@@ -28,7 +29,7 @@ class Home extends Component {
     const incidentCard = this.state.incidents.map((incident) => {
       return (
         <tr>
-          <td><button class="btn btn-primary btn-md  " type="submit" ><SearchkIcon />Dar Seguimiento</button></td>
+          <td>  <Link to="/InformacionIncidencia"><button class="btn btn-primary btn-md  " type="submit" ><SearchkIcon />Dar Seguimiento</button></Link></td>
           <th scope="row">{incident.impactLevel}</th>
           <td>{incident.impactFeasibility}</td>
           <td>{incident.description}</td>
