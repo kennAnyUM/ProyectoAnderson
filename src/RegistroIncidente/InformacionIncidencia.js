@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
+import Modal from 'react-responsive-modal';
 
 class InformacionIncidencia extends React.Component {
     constructor(props) {
@@ -18,82 +19,108 @@ class InformacionIncidencia extends React.Component {
                         </header>
                         <div>
                             <br></br>
-                            {BodyInformation()}
-                            <div class="pagination justify-content-end">
-                                <button class="btn btn-light  " type="submit">Agregar Pasos</button>
-                                <button class="btn btn-primary" type="submit">Finalizar</button>
-                            </div>
+                            
                         </div>
                     </fieldset>
                 </form>
-
+                <BodyInformation />
             </div>
         )
     }
 }
 
 
-function BodyInformation() {
-    return (
+class BodyInformation extends React.Component {
+  
+        state = {
+            open: false
+        };
+    
 
-        <div className="container">
+    onOpenModal = () => {
+        this.setState({ open: true });
+      };
+     
+      onCloseModal = () => {
+        this.setState({ open: false });
+      };
 
-            <div className="row">
+    render() {
 
-                <div className="col-xs-4 col-md-4">
+        const { open } = this.state;
 
-                    <div className="Container-div">
+        return (
 
-                        <div className="form-group blue-border-focus">
-                            <label>Dueño Asignacion</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
-                            <br></br>
-                            <label>Impacto incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
-                            <br></br>
-                            <label>Tecnologia incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+
+            <div className="container">
+
+                <div className="row">
+
+                    <div className="col-xs-4 col-md-4">
+
+                        <div className="Container-div">
+
+                            <div className="form-group blue-border-focus">
+                                <label>Duenno Asignacion</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <label>Impacto incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <label>Tecnologia incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                    <div className="col-xs-4 col-md-4">
 
-                <div className="col-xs-4 col-md-4">
+                        <div className="Container-div">
 
-                    <div className="Container-div">
+                            <div className="form-group blue-border-focus">
+                                <label>Tipo incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <label>Fecha incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                            </div>
 
-                        <div className="form-group blue-border-focus">
-                            <label>Tipo incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
-                            <br></br>
-                            <label>Fecha incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                         </div>
 
                     </div>
 
-                </div>
 
+                    <div className="col-xs-4 col-md-4">
 
-                <div className="col-xs-4 col-md-4">
+                        <div className="Container-div">
 
-                    <div className="Container-div">
+                            <div className="form-group blue-border-focus">
+                                <label>Estado Actual</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <label>Area incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <label>Grado incidencia</label>
+                                <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
+                                <br></br>
+                                <br></br>
+                                <div class="pagination justify-content-end">
+                                <button onClick={this.onOpenModal}>Insertar Pasos</button>
+                                    <button class="btn btn-primary" type="submit">Finalizar</button>
+                                    <Modal open={open} onClose={this.onCloseModal} center>
+                                    <h2>INNSERTAR PASOS</h2>
+                                    </Modal>
+                                </div>
+                            </div>
 
-                        <div className="form-group blue-border-focus">
-                            <label>Estado Actual</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
-                            <br></br>
-                            <label>Area incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
-                            <br></br>
-                            <br></br>
-                            <label>Grado incidencia</label>
-                            <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                         </div>
 
                     </div>
@@ -102,11 +129,11 @@ function BodyInformation() {
 
             </div>
 
-        </div>
 
-
-    );
+        )
+    }
 }
+
 
 
 export default InformacionIncidencia;
