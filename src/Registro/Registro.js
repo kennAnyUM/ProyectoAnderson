@@ -6,7 +6,7 @@ import Background from '../components/Background';
 import axios from 'axios';
 
 class registroColaborador extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -120,10 +120,13 @@ class registroColaborador extends Component {
                                 <div className="form-group">
                                     <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
-                                    <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
-                                    <br/>
-                                    <Link to="/getAdmin"><button className="btn btn-primary">Admin</button></Link>
+
+                                    <Link to="/ForgotPass"><small id="forgotPassword" className="form-text text-muted">¿Olvidaste la contraseña?</small></Link>
+
+                                   
+
                                 </div>
+                                <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
                             </form>
 
                         </div>

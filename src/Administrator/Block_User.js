@@ -45,7 +45,7 @@ class navigatiom extends React.Component {
                     <td>{party.apellido}</td>
                     <td>{party.correo}</td>
                     <td>{party.area}</td>
-                    <td><button class="btn btn-danger  " type="submit"><BlockIcon/>  Cancelar</button></td>
+                    <td><button class="btn btn-danger  " type="submit"><BlockIcon/>  Bloquear</button></td>
                 </tr>
 
             )
@@ -57,9 +57,9 @@ class navigatiom extends React.Component {
 
                 <br />
                 <br />
-                <br />
-                <br />
-                <div className="w-auto p-3">
+              
+
+                <div className="w-auto p-3 mt-4">
                 <input className="form-control" id="myInput" type="text" placeholder="Search.."></input>
                 </div>
                 <div className="container table-responsive " id="main_div">
