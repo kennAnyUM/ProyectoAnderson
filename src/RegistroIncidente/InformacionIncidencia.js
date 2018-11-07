@@ -19,7 +19,7 @@ class InformacionIncidencia extends React.Component {
                         </header>
                         <div>
                             <br></br>
-                            
+
                         </div>
                     </fieldset>
                 </form>
@@ -31,23 +31,9 @@ class InformacionIncidencia extends React.Component {
 
 
 class BodyInformation extends React.Component {
-  
-        state = {
-            open: false
-        };
-    
-
-    onOpenModal = () => {
-        this.setState({ open: true });
-      };
-     
-      onCloseModal = () => {
-        this.setState({ open: false });
-      };
 
     render() {
 
-        const { open } = this.state;
 
         return (
 
@@ -113,11 +99,28 @@ class BodyInformation extends React.Component {
                                 <br></br>
                                 <br></br>
                                 <div class="pagination justify-content-end">
-                                <button onClick={this.onOpenModal}>Insertar Pasos</button>
-                                    <button class="btn btn-primary" type="submit">Finalizar</button>
-                                    <Modal open={open} onClose={this.onCloseModal} center>
-                                    <h2>INNSERTAR PASOS</h2>
-                                    </Modal>
+                                    <div id="myModal" class="modal fade in">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                                                    <h4 class="modal-title">Modal Heading</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                                        <button class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Save</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary">Insertar Pasos</a>
                                 </div>
                             </div>
 
