@@ -105,10 +105,10 @@ class BodyInformation extends React.Component {
 
                                                 <div class="modal-header">
                                                     <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                                                    <h4 class="modal-title">Modal Heading</h4>
+                                                    <h4 class="modal-title">Inserte los pasos realizados</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                    <textarea class="form-control" rows="5" id="comment"></textarea>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <div class="btn-group">
