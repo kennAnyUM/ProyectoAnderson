@@ -19,10 +19,6 @@ class InformacionIncidencia extends React.Component {
                         <div>
                             <br></br>
                             {BodyInformation()}
-<<<<<<< HEAD
-                         
-=======
->>>>>>> 6852d1115373bba6eb7a8509d2eddbe0dfac01df
                             <div class="pagination justify-content-end">
                                 <button class="btn btn-light  " type="submit">Agregar Pasos</button>
                                 <button class="btn btn-primary" type="submit">Finalizar</button>
