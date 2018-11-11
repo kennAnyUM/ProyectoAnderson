@@ -32,8 +32,9 @@ class recover extends React.Component {
                     <div className="form-group">
                         <input type="text" name="emailConfim" className="form-control" placeholder="Confirmar Correo Electronico" value={password} onChange={this.onChange} />
                         <span className="help-block"></span>
+                        <button className="btn  btn-primary disable btn-block " type="submit">Enviar</button>
                     </div>
-                    <button className="btn btn-lg btn-primary disable btn-block " type="submit">Enviar</button>
+
                 </form>
             </div>
         );
