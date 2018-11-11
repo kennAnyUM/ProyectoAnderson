@@ -17,7 +17,7 @@ class navigatiom extends React.Component {
   render() {
     return (
       <nav className="container-fluid navbar navbar-expand-lg navbar-light" id="nav">
-        <a className="navbar-brand" href="#"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} width="35" height="35"></img></a>
+         <Link to="/Incidentes"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} width="35" height="35"></img></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -25,24 +25,24 @@ class navigatiom extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link to="/Incidentes">    <a className="nav-link" href="#"><HomeIcon/> Inicio<span className="sr-only">(current)</span></a></Link>
+              <Link to="/Incidentes">    <a className="nav-link" href="#"><HomeIcon /> Inicio<span className="sr-only">(current)</span></a></Link>
             </li>
             <li className="nav-item">
-              <Link to="/InsertarIncidencia"><a className="nav-link" ><NewIncidentIcon/> Crear Incidencia<span className="sr-only">(current)</span></a></Link>
+              <Link to="/InsertarIncidencia"><a className="nav-link" ><NewIncidentIcon /> Crear Incidencia<span className="sr-only">(current)</span></a></Link>
             </li>
 
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><SettingIcon/> Administrar</a>
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><SettingIcon /> Administrar</a>
 
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link to="/newUser">  <a className="dropdown-item" href="#"><NewUserIcon/> Nuevas Solicitudes</a></Link>
+                <Link to="/newUser">  <a className="dropdown-item" href="#"><NewUserIcon /> Nuevas Solicitudes</a></Link>
                 <div className="dropdown-divider"></div>
-                <Link to="/BlockUser">  <a className="dropdown-item" href="#"><BlockUserIcon/> Bloquear Usuarios</a></Link>
+                <Link to="/BlockUser">  <a className="dropdown-item" href="#"><BlockUserIcon /> Bloquear Usuarios</a></Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#"><TechIcon/> Tecnologías</a>
+                <a className="dropdown-item" href="#"><TechIcon /> Tecnologías</a>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#"><AreaIcon/> Areas</a>
+                <a className="dropdown-item" href="#"><AreaIcon /> Areas</a>
               </div>
             </li>
             <li className="nav-item">
