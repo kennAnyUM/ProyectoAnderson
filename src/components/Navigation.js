@@ -4,6 +4,14 @@ import { Link } from "react-router-dom";
 import PersonIcon from '@material-ui/icons/Person';
 import ExitIcon from '@material-ui/icons/Input';
 import SettingsIcon from '@material-ui/icons/Settings';
+import NewUserIcon from '@material-ui/icons/GroupAdd';
+import BlockUserIcon from '@material-ui/icons/Block';
+import TechIcon from '@material-ui/icons/Domain';
+import AreaIcon from '@material-ui/icons/SupervisedUserCircle';
+import SettingIcon from '@material-ui/icons/Settings';
+import HomeIcon from '@material-ui/icons/Home';
+import NewIncidentIcon from '@material-ui/icons/AddCircleOutline';
+
 
 class navigatiom extends React.Component {
   render() {
@@ -17,22 +25,24 @@ class navigatiom extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link to="/Incidentes">    <a className="nav-link" href="#">Inicio<span className="sr-only">(current)</span></a></Link>
+              <Link to="/Incidentes">    <a className="nav-link" href="#"><HomeIcon/> Inicio<span className="sr-only">(current)</span></a></Link>
             </li>
             <li className="nav-item">
-              <Link to="/InsertarIncidencia"><a className="nav-link" >Crear Incidencia<span className="sr-only">(current)</span></a></Link>
+              <Link to="/InsertarIncidencia"><a className="nav-link" ><NewIncidentIcon/> Crear Incidencia<span className="sr-only">(current)</span></a></Link>
             </li>
 
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrar</a>
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><SettingIcon/> Administrar</a>
 
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <Link to="/BlockUser">  <a className="dropdown-item" href="#">Bloquear Usuarios</a></Link>
+              <Link to="/newUser">  <a className="dropdown-item" href="#"><NewUserIcon/> Nuevas Solicitudes</a></Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Tecnologías</a>
+                <Link to="/BlockUser">  <a className="dropdown-item" href="#"><BlockUserIcon/> Bloquear Usuarios</a></Link>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Areas</a>
+                <a className="dropdown-item" href="#"><TechIcon/> Tecnologías</a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#"><AreaIcon/> Areas</a>
               </div>
             </li>
             <li className="nav-item">

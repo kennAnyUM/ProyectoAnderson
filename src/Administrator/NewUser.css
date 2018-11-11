@@ -1,8 +1,9 @@
 #table_id{
     display : block;
-    max-height: auto 1024px;
+    max-height: 370px;
     overflow-y: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    height:1024px;
     background-color:#eeeeee;
     width: 100%;
     margin: 1% auto;
