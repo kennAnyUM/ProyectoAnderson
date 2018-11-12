@@ -10,6 +10,7 @@ import TechIcon from '@material-ui/icons/Domain';
 import AreaIcon from '@material-ui/icons/SupervisedUserCircle';
 import SettingIcon from '@material-ui/icons/Settings';
 import HomeIcon from '@material-ui/icons/Home';
+import ChartIcon from '@material-ui/icons/Assessment';
 import NewIncidentIcon from '@material-ui/icons/AddCircleOutline';
 
 
@@ -31,6 +32,9 @@ class navigatiom extends React.Component {
               <Link to="/InsertarIncidencia"><a className="nav-link" ><NewIncidentIcon /> Crear Incidencia<span className="sr-only">(current)</span></a></Link>
             </li>
 
+            <li className="nav-item">
+              <Link to="/MenuGrafico"><a className="nav-link" ><ChartIcon />Reportes<span className="sr-only">(current)</span></a></Link>
+            </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><SettingIcon /> Administrar</a>
