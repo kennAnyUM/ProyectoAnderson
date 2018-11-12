@@ -11,9 +11,16 @@ import Configuracion from '../configuracion/Perfil';
 import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
+import NewUser from '../Administrator/NewUser';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
+<<<<<<< HEAD
 import AddArea from  '../Administrator/addArea';
 import MenuReportes from '../Reportes/MenuGrafico';
+=======
+import AdminArea from  '../Administrator/AdminArea';
+import AdminTech from  '../Administrator/AdminTech';
+import ForgotPass from  '../WebInicio/Recovery';
+>>>>>>> 77755aa8286649c74bc120d351f595f6e23c60c6
 
 
 const AppRutas = () =>
@@ -26,8 +33,11 @@ const AppRutas = () =>
       <Route exact path="/getAdmin" component={GetAdmin} />
       <Route exact path="/BlockUser" component={BlockUser} />
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
-      <Route exact path="/AddArea" component={AddArea} />
+      <Route exact path="/AdminArea" component={AdminArea} />
+      <Route exact path="/AdminTech" component={AdminTech} />
       <Route exact path="/sidebar" component={sidebar} />
+      <Route exact path="/newUser" component={NewUser} />
+      <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
       <Route exact path="/MenuGrafico" component={MenuReportes} />
     </Switch>

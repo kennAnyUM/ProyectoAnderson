@@ -31,6 +31,7 @@ class InformacionIncidencia extends React.Component {
 
 
 class BodyInformation extends React.Component {
+<<<<<<< HEAD
 
     constructor(props, context) {
         super(props, context);
@@ -47,6 +48,8 @@ class BodyInformation extends React.Component {
     }
 
 
+=======
+>>>>>>> 77755aa8286649c74bc120d351f595f6e23c60c6
 
     render() {
 
@@ -114,6 +117,7 @@ class BodyInformation extends React.Component {
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                                 <br></br>
                                 <br></br>
+<<<<<<< HEAD
                                 <div className="modal-container" style={{ height: 200 }}>
 
 
@@ -206,6 +210,30 @@ class BodyInformation extends React.Component {
 
 
 
+=======
+                                <div class="pagination justify-content-end">
+                                    <div id="myModal" class="modal fade in">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                                                    <h4 class="modal-title">Inserte los pasos realizados</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                                        <button class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Save</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a data-toggle="modal" href="#myModal" class="btn btn-primary">Insertar Pasos</a>
+>>>>>>> 77755aa8286649c74bc120d351f595f6e23c60c6
                                 </div>
                             </div>
 

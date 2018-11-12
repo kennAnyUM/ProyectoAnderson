@@ -1,9 +1,4 @@
-#footer-main{
-    position: fixed;
+#footer-main{ 
     background-color: #eeeeee;
     color: #808080;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
 }

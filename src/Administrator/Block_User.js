@@ -62,7 +62,7 @@ class navigatiom extends React.Component {
                 <div className="w-auto p-3 mt-4">
                 <input className="form-control" id="myInput" type="text" placeholder="Search.."></input>
                 </div>
-                <div className="container table-responsive " id="main_div">
+                <div className=" container table-responsive " id="main_div">
                     <table className="table table-hover table-condensed " id="table_id">
                         <thead>
                             <tr>

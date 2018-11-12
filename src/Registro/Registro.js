@@ -6,7 +6,7 @@ import Background from '../components/Background';
 import axios from 'axios';
 
 class registroColaborador extends Component {
-    
+
     constructor(props) {
         super(props);
         this.state = {
@@ -68,12 +68,12 @@ class registroColaborador extends Component {
                             <form onSubmit={this.handleSubmit}>
                                 <div className="form-group">
                                     <label for="InputEmail">Correo electronico</label>
-                                    <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleChange}></input>
+                                    <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo" value={this.state.email} onChange={this.handleChange}></input>
                                     <small id="emailHelp" className="form-text text-muted">Ejemplo@impesa.net.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="nombreUsuario">Nombre</label>
-                                    <input type="password" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
+                                    <input type="text" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
                                 </div>
                                 <div className="form-group">
                                     <label for="apellidoUsuario">Primer apellido</label>
@@ -120,10 +120,13 @@ class registroColaborador extends Component {
                                 <div className="form-group">
                                     <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
-                                    <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
-                                    <br/>
-                                    <Link to="/getAdmin"><button className="btn btn-primary">Admin</button></Link>
+
+                                    <Link to="/ForgotPass"><small id="forgotPassword" className="form-text">¿Olvidaste la contraseña?</small></Link>
+
+
+
                                 </div>
+                                <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
                             </form>
 
                         </div>
