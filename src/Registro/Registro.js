@@ -121,7 +121,7 @@ class registroColaborador extends Component {
                                     <label for="contraseñaLogin">Contrseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
 
-                                    <Link to="/ForgotPass"><small id="forgotPassword" className="form-text text-muted">¿Olvidaste la contraseña?</small></Link>
+                                    <Link to="/ForgotPass"><small id="forgotPassword" className="form-text">¿Olvidaste la contraseña?</small></Link>
 
                                    
 

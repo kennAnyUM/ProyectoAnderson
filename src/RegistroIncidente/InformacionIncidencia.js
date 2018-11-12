@@ -102,7 +102,6 @@ class BodyInformation extends React.Component {
                                     <div id="myModal" class="modal fade in">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
-
                                                 <div class="modal-header">
                                                     <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
                                                     <h4 class="modal-title">Inserte los pasos realizados</h4>
