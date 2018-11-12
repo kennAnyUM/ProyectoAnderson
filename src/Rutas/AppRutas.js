@@ -32,7 +32,6 @@ const AppRutas = () =>
       <Route exact path="/AdminTech" component={AdminTech} />
       <Route exact path="/sidebar" component={sidebar} />
       <Route exact path="/newUser" component={NewUser} />
-      <Route exact path="/AddArea" component={AddArea} />
       <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
     </Switch>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import { colaboradores } from '../components/bd/colaborador.json';
+import '../Administrator/Block_User.css';
 
 
 class AsignacionIncidencia extends React.Component {
@@ -16,7 +17,7 @@ class AsignacionIncidencia extends React.Component {
           <fieldset className="fields">
             <header className="App-header">
               <br /><br /><br />
-              <h3 className="mt-4">Asignar Incidencia</h3>
+              <h3 className="mt-4"><b>Asignar Incidencia</b></h3>
             </header>
             <div>
               {ShowIncident()}
@@ -61,30 +62,28 @@ class ColaboradorTabla extends React.Component {
 
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-md-12">
-            <div className="Container-div">
+          <div className="col">
+            <div className=" container " id="main_div">
+              <table className="table table-hover table-condensed " id="table_id">
+              <thead >
+                  <tr >
+                    <th>Asignar
+            </th>
+                    <th>Area Especializacion
+            </th>
+                    <th >Primer Nombre
+            </th>
+                    <th >Primer Apellido
+            </th>
+                    <th >Correo Electronico
+            </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {colaboradorCard}
+                </tbody>
+              </table>
             </div>
-
-            <table id="tableColab" class="table table-bordered table-light table-striped mt-4">
-              <thead className="table-dark" >
-                <tr >
-                  <th>Asignar
-            </th>
-                  <th>Area Especializacion
-            </th>
-                  <th >Primer Nombre
-            </th>
-                  <th >Primer Apellido
-            </th>
-                  <th >Correo Electronico
-            </th>
-                </tr>
-              </thead>
-              <tbody>
-                {colaboradorCard}
-              </tbody>
-            </table>
-
           </div>
         </div>
       </div>
@@ -95,65 +94,40 @@ class ColaboradorTabla extends React.Component {
 
 function FilterUser() {
   return (
-
     <div className="container">
-
       <div className="row">
 
-        <div className="col-xs-12 col-md-12">
-
-          <div className="Container-div">
-
-            <div >
-
-              <label for="exampleFormControl">Filtrar Incidencia</label>
-              <br></br>
-              <label class="checkbox-inline"> <input type="checkbox" value="" />Bases de Datos&nbsp;&nbsp;</label>
-              <label class="checkbox-inline"> <input type="checkbox" value="" />Redes&nbsp;&nbsp;</label>
-              <label class="checkbox-inline"> <input type="checkbox" value="" />Desarrollo&nbsp;&nbsp;</label>
-              <label class="checkbox-inline"> <input type="checkbox" value="" />Infraestructura&nbsp;&nbsp;</label>
-
+        <div className="Container-div">
+          <div >
+            <label for="exampleFormControl">Filtrar Incidencia</label>
+            <br></br>
+            <div className="form-row">
+              <label class="checkbox-inline"> <input type="checkbox" value="" /> Bases de Datos&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value="" /> Redes&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value="" /> Desarrollo&nbsp;&nbsp;</label>
+              <label class="checkbox-inline"> <input type="checkbox" value="" /> Infraestructura&nbsp;&nbsp;</label>
             </div>
 
           </div>
-
         </div>
-
       </div>
-
     </div>
-
-
   );
 }
 
 function ShowIncident() {
   return (
-
     <div className="container">
-
       <div className="row">
-
-        <div className="col-xs-6 col-md-6">
-
-          <div className="Container-div">
-
-            <div >
-              <h1>Incidencia</h1>
-              <blockquote>
-                <p>Se presento una incidencia en el area de base de datos, en el servidor externo de la empresa, se debe recurrir a restablecer todos los dominios, para entrar nuevamente al trabajo normal.</p>
-              </blockquote>
-            </div>
-
+        <div className="Container-div">
+          <div >
+            <blockquote>
+              <p>Se presento una incidencia en el area de base de datos, en el servidor externo de la empresa, se debe recurrir a restablecer todos los dominios, para entrar nuevamente al trabajo normal.</p>
+            </blockquote>
           </div>
-
         </div>
-
       </div>
-
     </div>
-
-
   );
 }
 

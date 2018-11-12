@@ -123,7 +123,7 @@ class registroColaborador extends Component {
 
                                     <Link to="/ForgotPass"><small id="forgotPassword" className="form-text">¿Olvidaste la contraseña?</small></Link>
 
-                                   
+
 
                                 </div>
                                 <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>

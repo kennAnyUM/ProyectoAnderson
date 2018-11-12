@@ -58,27 +58,31 @@ class AdminTech extends React.Component {
                                         <input type="text" className="form-control" id="validationCustom02" placeholder="Nombre Tecnología" />
                                     </div>
                                     <div className="col-md-2 mb-3">
-                                        <label>dd</label>
+                                        <label>Tipo de Tecnología</label>
 
                                         <select class="form-control" id="">
-                                            <option disabled="true" selected="true">Tipo de</option>
+                                            <option disabled="true" selected="true">Tipo de Tecnología</option>
                                             <option>Software</option>
                                             <option>Hardware</option>
                                         </select>
                                     </div>
 
-                                    <div className="col-md-4 mb-3">
-                                        <label>dd</label>
-                                        <div class=" justify-content-end">
-                                            <select class="btn" id="">
-                                                <option disabled="true" selected="true">Tipo de</option>
-                                                <option>Software</option>
-                                                <option>Hardware</option>
+                                   <div className="col-md-2 mb-3">
+                                        <label>Área</label>
 
-                                            </select>
-                                            <button class="btn btn-ligth " type="submit"><AddIcon />  Agregar</button>
-                                        </div>
+                                        <select class="btn" id="">
+                                            <option disabled="true" selected="true">Tipo de Tecnología</option>
+                                            <option>Redes</option>
+                                            <option>Bases de datos</option>
+                                            <option>Producción</option>
 
+                                        </select>
+        
+                                    </div>
+
+                                    <div className="col-md-2 mb-3">
+                                        <br/>
+                                        <button class="btn  " id="" type="submit"><AddIcon />  Agregar</button>
                                     </div>
 
                                 </div>
@@ -88,23 +92,25 @@ class AdminTech extends React.Component {
                         </div>
 
                     </div>
-                    <div className="container table-responsive " id="main_div">
-                        <table className="table table-hover table-condensed " id="table_id">
-                            <thead>
-                                <tr>
-                                    <th className="size" scope="col">Nombre</th>
-                                    <th className="size" scope="col"></th>
-                                    <th className="size" scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody id="myTable">
-                                {areasTable}
 
-                            </tbody>
-                        </table>
-                    </div>
+                </div>
+                <div className="container table-responsive " id="main_div">
+                    <table className="table table-hover table-condensed " id="table_id">
+                        <thead>
+                            <tr>
+                                <th className="size" scope="col">Nombre</th>
+                                <th className="size" scope="col"></th>
+                                <th className="size" scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            {areasTable}
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
+         
         )
     }
 }
