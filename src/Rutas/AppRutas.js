@@ -13,14 +13,10 @@ import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
 import NewUser from '../Administrator/NewUser';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
-<<<<<<< HEAD
-import AddArea from  '../Administrator/addArea';
 import MenuReportes from '../Reportes/MenuGrafico';
-=======
 import AdminArea from  '../Administrator/AdminArea';
 import AdminTech from  '../Administrator/AdminTech';
 import ForgotPass from  '../WebInicio/Recovery';
->>>>>>> 77755aa8286649c74bc120d351f595f6e23c60c6
 
 
 const AppRutas = () =>
