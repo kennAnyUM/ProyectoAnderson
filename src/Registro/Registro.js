@@ -68,12 +68,12 @@ class registroColaborador extends Component {
                             <form onSubmit={this.handleSubmit}>
                                 <div className="form-group">
                                     <label for="InputEmail">Correo electronico</label>
-                                    <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleChange}></input>
+                                    <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo" value={this.state.email} onChange={this.handleChange}></input>
                                     <small id="emailHelp" className="form-text text-muted">Ejemplo@impesa.net.</small>
                                 </div>
                                 <div className="form-group">
                                     <label for="nombreUsuario">Nombre</label>
-                                    <input type="password" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
+                                    <input type="text" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
                                 </div>
                                 <div className="form-group">
                                     <label for="apellidoUsuario">Primer apellido</label>

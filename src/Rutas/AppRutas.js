@@ -11,6 +11,7 @@ import Configuracion from '../configuracion/Perfil';
 import GetAdmin from '../Administrator/GetAdmin';
 import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
+import NewUser from '../Administrator/NewUser';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 import AdminArea from  '../Administrator/AdminArea';
 import AdminTech from  '../Administrator/AdminTech';
@@ -29,6 +30,9 @@ const AppRutas = () =>
       <Route exact path="/AsignacionIncidencia" component={AsignacionIncidencia} />
       <Route exact path="/AdminArea" component={AdminArea} />
       <Route exact path="/AdminTech" component={AdminTech} />
+      <Route exact path="/sidebar" component={sidebar} />
+      <Route exact path="/newUser" component={NewUser} />
+      <Route exact path="/AddArea" component={AddArea} />
       <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
     </Switch>
