@@ -13,6 +13,7 @@ import BlockUser from '../Administrator/Block_User';
 import sidebar from '../components/SidebarAdmin';
 import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 import AddArea from  '../Administrator/addArea';
+import MenuReportes from '../Reportes/MenuGrafico';
 
 
 const AppRutas = () =>
@@ -28,6 +29,7 @@ const AppRutas = () =>
       <Route exact path="/AddArea" component={AddArea} />
       <Route exact path="/sidebar" component={sidebar} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
+      <Route exact path="/MenuGrafico" component={MenuReportes} />
     </Switch>
 
   </App>;
