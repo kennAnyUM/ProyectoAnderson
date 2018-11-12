@@ -31,9 +31,9 @@ class navigatiom extends React.Component {
               <Link to="/BlockUser">  <a className="dropdown-item" href="#">Bloquear Usuarios</a></Link>
               <Link to="/BlockUser">  <a className="dropdown-item" href="#">Aceptar Usuarios</a></Link>
                 <div className="dropdown-divider"></div>
-                <Link to="/BlockUser">   <a className="dropdown-item" href="#">Tecnologías</a></Link>
+                <Link to="/AdminTech">   <a className="dropdown-item" href="#">Tecnologías</a></Link>
                 <div className="dropdown-divider"/>
-                <Link to="/AddArea">  <a className="dropdown-item" href="#">Areas</a></Link>
+                <Link to="/AdminArea">  <a className="dropdown-item" href="#">Areas</a></Link>
               </div>
             </li>
             <li className="nav-item">
