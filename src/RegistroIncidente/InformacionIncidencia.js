@@ -15,7 +15,7 @@ class InformacionIncidencia extends React.Component {
                     <fieldset className="fields">
                         <header className="App-header">
                             <br /><br /><br />
-                            <h3 className="mt-4">Informacion Incidencia</h3>
+                            <h3 className="mt-4">Información Incidencia</h3>
                         </header>
                         <div>
                             <br></br>
@@ -47,7 +47,7 @@ class BodyInformation extends React.Component {
                         <div className="Container-div">
 
                             <div className="form-group blue-border-focus">
-                                <label>Duenno Asignacion</label>
+                                <label>Dueño Asignación</label>
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                                 <br></br>
                                 <br></br>
@@ -55,7 +55,7 @@ class BodyInformation extends React.Component {
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                                 <br></br>
                                 <br></br>
-                                <label>Tecnologia incidencia</label>
+                                <label>Tecnología incidencia</label>
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                             </div>
 
@@ -90,7 +90,7 @@ class BodyInformation extends React.Component {
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                                 <br></br>
                                 <br></br>
-                                <label>Area incidencia</label>
+                                <label>Área incidencia</label>
                                 <input type="text" class="form-control" placeholder="Readonly input" readonly="readonly" />
                                 <br></br>
                                 <br></br>

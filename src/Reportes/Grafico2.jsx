@@ -25,17 +25,17 @@ const plotOptions = {
 };
 
 const funnelData = [
-  ['Website visits', 15654],
-  ['Downloads', 4064],
-  ['Requested price list', 1987],
-  ['Invoice sent', 976],
-  ['Finalized', 846]
+  ['Redes sociales', 15654],
+  ['Descargas', 4064],
+  ['Correos', 1987],
+  ['Archivos desconocidos', 976],
+  ['Links de vinculación', 846]
 ];
 
 const Funnel = () => (
   <div className="app">
     <HighchartsChart plotOptions={plotOptions}>
-      <Title>Sales funnel</Title>
+      <Title>Sitios inseguros</Title>
 
       <FunnelSeries name="Unique users" data={funnelData} />
     </HighchartsChart>

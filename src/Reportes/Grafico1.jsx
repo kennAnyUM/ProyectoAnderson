@@ -45,22 +45,22 @@ const App1 = () => (
     }}
   >
     <Chart type="column" />
-    <Title>Graph Title</Title>
-    <Subtitle>Click the columns</Subtitle>
+    <Title>Ataques frecuentes</Title>
+    <Subtitle>Gráfico</Subtitle>
 
     <XAxis id="categories" type="category" />
 
     <YAxis id="number">
-      <YAxis.Title>Axis Title</YAxis.Title>
+      <YAxis.Title>Cantidad</YAxis.Title>
 
       <ColumnSeries
         id="return-contribution"
         name="Column Name"
         colorByPoint
         data={[
-          { name: "Column 1", y: 10, drilldown: "col1" },
-          { name: "Column 2", y: 20, drilldown: "col2" },
-          { name: "Column 3", y: 55, drilldown: "col3" }
+          { name: "Inyección de codigo", y: 10, drilldown: "col1" },
+          { name: "Software desactualizado", y: 20, drilldown: "col2" },
+          { name: "Control remoto", y: 55, drilldown: "col3" }
         ]}
       />
     </YAxis>

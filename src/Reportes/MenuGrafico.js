@@ -17,7 +17,7 @@ class MenuReportes extends React.Component {
           <fieldset className="fields">
             <header className="App-header">
               <br /><br /><br />
-              <h3 className="mt-4">Seleccione el reporte</h3>
+              <h3 className="mt-4">Menu de reportes</h3>
             </header>
             <div>
               {SelectGraph()}
@@ -47,22 +47,22 @@ function SelectGraph() {
 
           <div className="Container-div">
 
-            <ul class="nav nav-pills" role="tablist">
+            <ul class="nav nav-pills bg-light" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+                <a class="nav-link " data-toggle="pill" href="#home">Casos de incidencia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+                <a class="nav-link" data-toggle="pill" href="#menu1">Ataques frecuentes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+                <a class="nav-link" data-toggle="pill" href="#menu2">Vulnerabilidad</a>
               </li>
             </ul>
 
 
             <div class="tab-content">
 
-              <div id="home" class="container tab-pane active"><br></br>
+              <div id="home" class="container tab-pane fade"><br></br>
                 <h3>Reporte1</h3>
                 <App />
               </div>
