@@ -36,11 +36,8 @@ const AppRutas = () =>
       <Route exact path="/newUser" component={NewUser} />
       <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
-<<<<<<< HEAD
       <Route exact path="/SignIn" component={SingIn} />
-=======
       <Route exact path="/MenuGrafico" component={MenuReportes} />
->>>>>>> 2ae76c2ce4b901f70739146959cdfb117f53f14c
     </Switch>
 
   </App>;
