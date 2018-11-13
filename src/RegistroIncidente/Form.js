@@ -125,7 +125,7 @@ class Select extends React.Component {
               <select className="form-control" id="lang2" onChange={this.handleChange2.bind(this)} value={this.state.tech2}>
                 {listaImpacto}
               </select>
-              <h4 className="H4-form">{this.state.tech2}</h4>
+              
 
               <br></br>
 
@@ -133,7 +133,7 @@ class Select extends React.Component {
               <select className="form-control" disabled="false" id="lang4" onChange={this.handleChange4.bind(this)} value={this.state.tech4}>
                 {listaTecno}
               </select>
-              <h4 className="H4-form">{this.state.tech4}</h4>
+             
 
             </div>
 
@@ -147,7 +147,7 @@ class Select extends React.Component {
               <select className="form-control" id="lang" onChange={this.handleChange.bind(this)} value={this.state.tech}>
                 {listaIncidencias}
               </select>
-              <h4 className="H4-form">{this.state.tech}</h4>
+              
 
               <br></br>
 
@@ -166,7 +166,7 @@ class Select extends React.Component {
               <select className="form-control" id="lang3" onChange={this.handleChange3.bind(this)} value={this.state.tech3}>
                 {listaAreas}
               </select>
-              <h4 className="H4-form">{this.state.tech3}</h4>
+            
 
               <br></br>
 
@@ -174,7 +174,7 @@ class Select extends React.Component {
               <select className="form-control" id="lang5" onChange={this.handleChange5.bind(this)} value={this.state.tech5}>
                 {listaControl}
               </select>
-              <h4 className="H4-form">{this.state.tech5}</h4>
+             
 
             </div>
 
@@ -206,6 +206,8 @@ function MyTextArea() {
           <div className="Container-div">
 
             <div className="form-group blue-border-focus">
+            <br></br>
+            <br></br>
               <label for="exampleFormControlTextarea5">Inserte la descripción de la incidencia</label>
               <textarea className="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
             </div>
