@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import App from '../Reportes/Grafico';
 import App1 from '../Reportes/Grafico1';
 import Funnel from '../Reportes/Grafico2';
+import MyCsvLink from '../Reportes/MyCsvLink';
 
 class MenuReportes extends React.Component {
   constructor(props) {
@@ -17,13 +18,13 @@ class MenuReportes extends React.Component {
           <fieldset className="fields">
             <header className="App-header">
               <br /><br /><br />
-              <h3 className="mt-4">Menu de reportes</h3>
+              <h3 className="mt-4">Menu de Reportes</h3>
             </header>
             <div>
               {SelectGraph()}
+              <MyCsvLink />
               <div class="pagination justify-content-end">
-                <button class="btn btn-light  " type="submit">Cancelar</button>
-                <button class="btn btn-primary" type="submit">Notificar</button>
+
               </div>
             </div>
           </fieldset>
@@ -63,7 +64,7 @@ function SelectGraph() {
             <div class="tab-content">
 
               <div id="home" class="container tab-pane fade"><br></br>
-                <h3>Reporte1</h3>
+                <h3>Reporte 1</h3>
                 <App />
               </div>
 

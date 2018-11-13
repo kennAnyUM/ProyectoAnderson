@@ -67,4 +67,5 @@ const App1 = () => (
   </HighchartsChart>
 );
 
+
 export default withHighcharts(App1, Highcharts);
