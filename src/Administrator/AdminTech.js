@@ -75,9 +75,7 @@ class AdminTech extends React.Component {
                                             <option>Redes</option>
                                             <option>Bases de datos</option>
                                             <option>Producción</option>
-
                                         </select>
-        
                                     </div>
 
                                     <div className="col-md-2 mb-3">
