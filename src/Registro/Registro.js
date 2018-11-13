@@ -73,6 +73,12 @@ class registroColaborador extends Component {
                             <form>
                                 <br/>
                                 <div className="form-group">
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
+                                <br></br>
                                     <h3>Gestión de incidentes de seguridad</h3>
                                 </div>
                                 <div className="form-group">
