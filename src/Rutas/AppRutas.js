@@ -16,6 +16,7 @@ import InformacionIncidencia from '../RegistroIncidente/InformacionIncidencia';
 import AdminArea from  '../Administrator/AdminArea';
 import AdminTech from  '../Administrator/AdminTech';
 import ForgotPass from  '../WebInicio/Recovery';
+import SingIn from  '../Registro/signIn';
 
 
 const AppRutas = () =>
@@ -34,6 +35,7 @@ const AppRutas = () =>
       <Route exact path="/newUser" component={NewUser} />
       <Route exact path="/ForgotPass" component={ForgotPass} />
       <Route exact path="/InformacionIncidencia" component={InformacionIncidencia} />
+      <Route exact path="/SignIn" component={SingIn} />
     </Switch>
 
   </App>;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Registro.css';
-import logo from './user.png';
 import { Link } from "react-router-dom";
 import Background from '../components/Background';
 import axios from 'axios';
+import Nav from '../components/NavigationUnregistred';
 
 class registroColaborador extends Component {
 
@@ -56,84 +56,47 @@ class registroColaborador extends Component {
         return (
 
             <div className="App">
+
+                <Nav />
                 <br /><br />
                 <Background />
                 <div className="container">
 
                     <div className="row">
-                        <div className="col-xs-4 col-sm-4 col-lg-1">
-                        </div>
+                        <br /><br />
+
 
                         <div className="col-xs-4 col-sm-4 col-lg-4">
-                            <form onSubmit={this.handleSubmit}>
-                                <div className="form-group">
-                                    <label for="InputEmail">Correo electronico</label>
-                                    <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ingrese su correo" value={this.state.email} onChange={this.handleChange}></input>
-                                    <small id="emailHelp" className="form-text text-muted">Ejemplo@impesa.net.</small>
-                                </div>
-                                <div className="form-group">
-                                    <label for="nombreUsuario">Nombre</label>
-                                    <input type="text" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
-                                </div>
-                                <div className="form-group">
-                                    <label for="apellidoUsuario">Primer apellido</label>
-                                    <input type="text" className="form-control" name="apellido" id="apellidoUsuario" placeholder="Primer apellido" value={this.state.apellido} onChange={this.handleChange}></input>
-                                </div>
-                                <div className="form-group">
-                                    <label for="segundoApellidoUsuario">Segundo apellido</label>
-                                    <input type="text" class="form-control" name="segundoApellido" id="segundoApellidoUsuario" placeholder="Segundo apellido" value={this.state.segundoApellido} onChange={this.handleChange}></input>
-                                </div>
-                                <fieldset className="form-group">
-                                    <legend>Tipo usuario</legend>
-                                    <div className="form-check">
-                                        <label className="form-check-label">
-                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="I" checked onChange={this.handleChange}></input>Interno</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <label className="form-check-label">
-                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="E" onChange={this.handleChange}></input>Externo</label>
-                                    </div>
-                                </fieldset>
-                                <div className="form-group">
-                                    <label for="contraseñaRegistro">Contraseña</label>
-                                    <input type="password" class="form-control" name="contraseña" id="contraseñaRegistro" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
-                                </div>
-                                <div class="form-group">
-                                    <label for="confirnContraseña">Contraseña</label>
-                                    <input type="password" class="form-control" name="contraseñaConfirmacion" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
-                                </div>
 
-                                <button className="btn btn-primary" type="submit" value="sumit">Registrar</button>
-                            </form>
-                        </div>
-                        <div className="col-xs-4 col-sm-4 col-lg-2">
                         </div>
                         <div className="col-xs-4 col-sm-4 col-lg-4">
                             <form>
+                                <br/>
                                 <div className="form-group">
-                                    <h3>Ya posee una cuenta?</h3><br />
+                                    <h3>Gestión de incidentes de seguridad</h3>
                                 </div>
                                 <div className="form-group">
-                                    <label for="emailLogin">Correo electronico</label>
+                                    <label for="emailLogin">Correo electrónico</label>
                                     <input type="email" className="form-control" id="emailLogin" aria-describedby="correoLogin" placeholder="Enter email"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label for="contraseñaLogin">Contrseña</label>
+                                    <label for="contraseñaLogin">Contraseña</label>
                                     <input className="form-control" type="password" name="passwordlogin" id="passwordLogin" placeholder="Contraseña"></input><br></br>
 
                                     <Link to="/ForgotPass"><small id="forgotPassword" className="form-text">¿Olvidaste la contraseña?</small></Link>
 
-
-
                                 </div>
                                 <Link to="/incidentes"><button className="btn btn-primary">Ingresar</button></Link>
                             </form>
+                        </div>
+                        <div className="col-xs-4 col-sm-4 col-lg-4">
+
 
                         </div>
 
                     </div>
 
-                    <br /><br /><br />
+
                 </div>
             </div>
         )
