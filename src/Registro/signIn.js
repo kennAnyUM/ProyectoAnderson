@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Background from '../components/Background';
 import axios from 'axios';
 import Nav from '../components/NavigationUnregistred';
+import $ from 'jquery';
 
 class registroColaborador extends Component {
 
@@ -20,6 +21,26 @@ class registroColaborador extends Component {
             rol_usuario: 'Administrador'
         }
         this.handleChange = this.handleChange.bind(this);
+        $(document).ready(function () {
+            $('#pass').keyup(function (e) {
+                var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+                var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+                var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+                if (false == enoughRegex.test($(this).val())) {
+                    $('#passstrength').html('Más caracteres.');
+                } else if (strongRegex.test($(this).val())) {
+                    $('#passstrength').className = 'ok';
+                    $('#passstrength').html('Fuerte!');
+                } else if (mediumRegex.test($(this).val())) {
+                    $('#passstrength').className = 'alert';
+                    $('#passstrength').html('Media!');
+                } else {
+                    $('#passstrength').className = 'error';
+                    $('#passstrength').html('Débil!');
+                }
+                return true;
+            });
+        });
     }
 
     handleChange = event => {
@@ -78,10 +99,12 @@ class registroColaborador extends Component {
                                         <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ejemplo@impesa.net." value={this.state.email} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="contraseñaRegistro">Contraseña</label>
-                                        <input type="password" className="form-control" name="contraseña" id="contraseñaRegistro" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
+                                        <input type="password" className="form-control" name="clave1" id="pass" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
+                                        <span id="passstrength"></span>
+                                       
                                         <br></br>
                                         <label for="confirnContraseña">Contraseña</label>
-                                        <input type="password" className="form-control" name="contraseñaConfirmacion" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
+                                        <input type="password" className="form-control" name="clave2" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
                                         <br></br>
                                         <legend>Tipo usuario</legend>
                                         <div className="form-check">
@@ -117,3 +140,15 @@ class registroColaborador extends Component {
 }
 
 export default registroColaborador;
+
+function myfunction(){
+
+    const texto = $('#passstrength').text();
+
+    if(texto == "Débil!"){
+        return("red");
+    }else if(texto == "Media!"){
+        return("yellow");
+    }
+    return("black");
+ }
