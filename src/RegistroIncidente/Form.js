@@ -207,7 +207,7 @@ function MyTextArea() {
 
             <div className="form-group blue-border-focus">
             <br></br>
-            <br> </br>
+            <br></br>
               <label for="exampleFormControlTextarea5">Inserte la descripción de la incidencia</label>
               <textarea className="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
             </div>
