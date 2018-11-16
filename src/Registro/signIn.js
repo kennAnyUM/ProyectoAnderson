@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import './Registro.css';
+import './SiginIn.css';
 import { Link } from "react-router-dom";
 import Background from '../components/Background';
 import axios from 'axios';
 import Nav from '../components/NavigationUnregistred';
 import $ from 'jquery';
+import color from '@material-ui/core/colors/orange';
+import { isNull } from 'util';
+
 
 class registroColaborador extends Component {
 
@@ -22,23 +25,34 @@ class registroColaborador extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         $(document).ready(function () {
-            $('#pass').keyup(function (e) {
-                var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
-                var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
-                var enoughRegex = new RegExp("(?=.{6,}).*", "g");
-                if (false == enoughRegex.test($(this).val())) {
-                    $('#passstrength').html('Más caracteres.');
-                } else if (strongRegex.test($(this).val())) {
-                    $('#passstrength').className = 'ok';
-                    $('#passstrength').html('Fuerte!');
-                } else if (mediumRegex.test($(this).val())) {
-                    $('#passstrength').className = 'alert';
-                    $('#passstrength').html('Media!');
+            $("#btn1").click(function () {
+                $('#btn_click').show(0);
+                 /*$("#div1").css("display", "none");*/ 
+                $('#btn_click').hide(100000);
+
+            });
+
+        });
+        $(document).ready(function () {
+            $('#contraseñaRegistro').keyup(function (e) {
+                if ($('#contraseñaRegistro').val().length < 1) {
+                    $('#passstrength').fadeOut(0);
                 } else {
-                    $('#passstrength').className = 'error';
-                    $('#passstrength').html('Débil!');
+                    $('#passstrength').show(0);
+                    var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+                    var mediumRegex = new RegExp("^(?=.{8,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+                    var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+                    if (false == enoughRegex.test($(this).val())) {
+                        $('#passstrength').html('Más caracteres');
+                    } else if (strongRegex.test($(this).val())) {
+                        $('#passstrength').html('Fuerte');
+                    } else if (mediumRegex.test($(this).val())) {
+                        $('#passstrength').html('Media');
+                    } else {
+                        $('#passstrength').html('Débil');
+                    }
+                    return true;
                 }
-                return true;
             });
         });
     }
@@ -79,8 +93,8 @@ class registroColaborador extends Component {
                 <Nav />
                 <br /><br /><br /><br />
                 <div className="container">
-                <h3>Datos Personales</h3>
-                <br></br>
+                    <h3>Datos Personales</h3>
+                    <br></br>
                     <div className="row">
                         <div className="col-md-6 mb-6">
                             <form onSubmit={this.handleSubmit}>
@@ -99,12 +113,12 @@ class registroColaborador extends Component {
                                         <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ejemplo@impesa.net." value={this.state.email} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="contraseñaRegistro">Contraseña</label>
-                                        <input type="password" className="form-control" name="clave1" id="pass" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
-                                        <span id="passstrength"></span>
-                                       
+                                        <input type="password" className="form-control" name="contraseña" id="contraseñaRegistro" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
+                                        <span className={myfunction()} role="alert" id="passstrength"></span>
+
                                         <br></br>
                                         <label for="confirnContraseña">Contraseña</label>
-                                        <input type="password" className="form-control" name="clave2" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
+                                        <input type="password" className="form-control" name="contraseñaConfirmacion" id="confirnContraseña" placeholder="Confirmación contraseña"></input>
                                         <br></br>
                                         <legend>Tipo usuario</legend>
                                         <div className="form-check">
@@ -116,8 +130,8 @@ class registroColaborador extends Component {
                                                 <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios2" value="E" onChange={this.handleChange}></input>Externo</label>
                                         </div>
                                         <br></br>
-                                        <button className="btn btn-primary" type="submit" value="sumit">Registrar</button>
-
+                                        <a href="#btn_click"><button id="btn1" className="btn btn-primary" type="submit" value="sumit">Registrar</button></a>
+                                        <div id="btn_click">{validatePassword()}</div>
                                     </div>
                                 </div>
                             </form>
@@ -134,6 +148,26 @@ class registroColaborador extends Component {
                     </div>
 
                 </div>
+                <div id="myModal" class="modal fade in">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
+                                <h4 class="modal-title">Inserte los pasos realizados</h4>
+                            </div>
+                            <div class="modal-body">
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                                    <button class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Save</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -141,14 +175,31 @@ class registroColaborador extends Component {
 
 export default registroColaborador;
 
-function myfunction(){
-
-    const texto = $('#passstrength').text();
-
-    if(texto == "Débil!"){
-        return("red");
-    }else if(texto == "Media!"){
-        return("yellow");
+function myfunction() {
+    var mensaje = $('#passstrength').text();
+    /* var mensaje= document.getElementById("passstrength").innerHTML*/
+    if (mensaje == "Débil") {
+        return "form-control alert alert-danger";
+    } else if (mensaje == "Media") {
+        return "alert alert-warning";
+    } else if (mensaje == "Fuerte") {
+        return "alert alert-success";
+    } else {
+        return "alert alert-dark";
     }
-    return("black");
- }
+}
+
+function validatePassword() {
+    var mensaje = $('#passstrength').text();
+    /* var mensaje= document.getElementById("passstrength").innerHTML*/
+    if (mensaje == "Débil") {
+        return "La contraseña es debil";
+    } else if (mensaje == "Media") {
+        return "#La contraseña es media";
+    } else if (mensaje == "Más caracteres") {
+        return "La contraseña carece de caracteres";
+    } else if (mensaje == "Fuerte") {
+        return "/incidentes";
+    }
+    return "black";
+}

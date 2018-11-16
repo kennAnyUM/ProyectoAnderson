@@ -9,8 +9,8 @@ class navigatiom extends React.Component {
   render() {
     return (
       <nav className="container-fluid navbar navbar-expand-lg navbar-light" id="nav">
-        <img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} height="30"/>
-        <img src={require("./imagenesImpesa/anderson.png")} height="35"/>
+        <Link to="/"><img src={require("./imagenesImpesa/ICONO ANDERSON1.png")} height="30"/>
+        <img src={require("./imagenesImpesa/anderson.png")} height="35"/></Link>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto"/>
 
