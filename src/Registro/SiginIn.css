@@ -2,5 +2,6 @@
     display: none;
 }
 #passstrength{
+    position: absolute;
     display: none;
 }
