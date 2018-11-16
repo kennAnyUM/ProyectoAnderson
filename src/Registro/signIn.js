@@ -36,9 +36,9 @@ class registroColaborador extends Component {
         $(document).ready(function () {
             $('#contraseñaRegistro').keyup(function (e) {
                 if ($('#contraseñaRegistro').val().length < 1) {
-                    $('#passstrength').fadeOut(0);
+                    $('#passstrength').fadeOut(1000);
                 } else {
-                    $('#passstrength').show(0);
+                    $('#passstrength').fadeIn(1000);
                     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
                     var mediumRegex = new RegExp("^(?=.{8,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
                     var enoughRegex = new RegExp("(?=.{8,}).*", "g");
