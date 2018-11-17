@@ -7,6 +7,7 @@ import Nav from '../components/NavigationUnregistred';
 import $ from 'jquery';
 import color from '@material-ui/core/colors/orange';
 import { isNull } from 'util';
+import { Button, Modal } from 'react-bootstrap'
 
 
 class registroColaborador extends Component {
@@ -26,22 +27,34 @@ class registroColaborador extends Component {
         this.handleChange = this.handleChange.bind(this);
         $(document).ready(function () {
             $("#btn1").click(function () {
-                $('#btn_click').show(0);
-                 /*$("#div1").css("display", "none");*/ 
-                $('#btn_click').hide(100000);
+                if (validatePassword()==false) {
+                    $("#modal2").show();
 
+                    $("#close").click(function () {
+                        $("#modal2").css("display", "none");
+                    });
+                }
             });
-
         });
+        /** $(document).ready(function () {
+             $("#btn1").click(function () {
+ 
+                 $('#modal2').modal();
+                /** $("#div1").css("display", "none");
+                 $('#btn_click').hide(100000);
+ 
+             });
+ 
+         });*/
         $(document).ready(function () {
             $('#contraseñaRegistro').keyup(function (e) {
                 if ($('#contraseñaRegistro').val().length < 1) {
                     $('#passstrength').fadeOut(1000);
                 } else {
                     $('#passstrength').fadeIn(1000);
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $("#passstrength").fadeOut(1000);
-                    },5000);
+                    }, 5000);
                     var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
                     var mediumRegex = new RegExp("^(?=.{8,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
                     var enoughRegex = new RegExp("(?=.{8,}).*", "g");
@@ -117,7 +130,7 @@ class registroColaborador extends Component {
                                         <br></br>
                                         <label for="contraseñaRegistro">Contraseña</label>
                                         <input type="password" className="form-control" name="contraseña" id="contraseñaRegistro" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
-                                        <span className={myfunction()} role="alert" id="passstrength"></span>
+                                        <span className={styleAlert()} role="alert" id="passstrength"></span>
 
                                         <br></br>
                                         <label for="confirnContraseña">Contraseña</label>
@@ -133,7 +146,7 @@ class registroColaborador extends Component {
                                                 <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios2" value="E" onChange={this.handleChange}></input>Externo</label>
                                         </div>
                                         <br></br>
-                                        <a href="#btn_click"><button id="btn1" className="btn btn-primary" type="submit" value="sumit">Registrar</button></a>
+                                        <button id="btn1" className="btn btn-primary" type="submit" value="sumit">Registrar</button>
                                         <div id="btn_click">{validatePassword()}</div>
                                     </div>
                                 </div>
@@ -147,29 +160,20 @@ class registroColaborador extends Component {
                             <br /><br /><br /><br />
                             <img src={require("../components/imagenesImpesa/ICONO ANDERSON1.png")} width="255" />
                         </div>
-
                     </div>
-
                 </div>
-                <div id="myModal" class="modal fade in">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <a class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></a>
-                                <h4 class="modal-title">Inserte los pasos realizados</h4>
-                            </div>
-                            <div class="modal-body">
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
-                            <div class="modal-footer">
-                                <div class="btn-group">
-                                    <button class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
-                                    <button class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Save</button>
-                                </div>
-                            </div>
+                <div className="container" id="modal2">
+                    <Modal.Dialog>
+                        <Modal.Header>
+                            <Modal.Title>Contraseña Incorrecta</Modal.Title>
+                        </Modal.Header>
 
-                        </div>
-                    </div>
+                        <Modal.Body>La contraseña tiene que ser fuerte para poder completar el registro</Modal.Body>
+
+                        <Modal.Footer>
+                            <Button id="close" bsStyle="primary">Aceptar</Button>
+                        </Modal.Footer>
+                    </Modal.Dialog>
                 </div>
             </div>
         )
@@ -178,7 +182,7 @@ class registroColaborador extends Component {
 
 export default registroColaborador;
 
-function myfunction() {
+function styleAlert() {
     var mensaje = $('#passstrength').text();
     /* var mensaje= document.getElementById("passstrength").innerHTML*/
     if (mensaje == "Débil") {
@@ -196,13 +200,15 @@ function validatePassword() {
     var mensaje = $('#passstrength').text();
     /* var mensaje= document.getElementById("passstrength").innerHTML*/
     if (mensaje == "Débil") {
-        return "La contraseña es debil";
+        return false;
     } else if (mensaje == "Media") {
-        return "#La contraseña es media";
+        return false;
     } else if (mensaje == "Más caracteres") {
-        return "La contraseña carece de caracteres";
+        return false;
     } else if (mensaje == "Fuerte") {
-        return "/incidentes";
+        return true;
+    }else if(mensaje.length<1 || mensaje == null){
+        return false;
     }
-    return "black";
+    return false;
 }
