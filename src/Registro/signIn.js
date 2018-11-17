@@ -26,8 +26,22 @@ class registroColaborador extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         $(document).ready(function () {
+            $('#valor').keyup(function () {
+                $(this).each(function () {
+                    var campos = $(this).val();
+                    if ((campos.toLowerCase == ("select * from").toLowerCase) || (campos.toLowerCase == ("delete * from")).toLowerCase) {
+                        $("#msj").html('Uno de los campos contiene una sentencia invalida');
+                        $("#modal2").show();
+                    } else {
+                        $("#modal2").css("display", "none");
+                    }
+                });
+            });
+        });
+        $(document).ready(function () {
             $("#btn1").click(function () {
-                if (validatePassword()==false) {
+                if (validatePassword() == false) {
+                    $("#msj").html('La contraseña tiene que ser fuerte para poder completar el registro');
                     $("#modal2").show();
 
                     $("#close").click(function () {
@@ -117,16 +131,16 @@ class registroColaborador extends Component {
                                 <div className="form-group">
                                     <div className="form-group">
                                         <label for="nombreUsuario">Nombre</label>
-                                        <input type="text" className="form-control" name="nombre" id="nombreUsuario" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
+                                        <input type="text" className="form-control validar" name="nombre" id="valor" placeholder="Ingrese su nombre" value={this.state.nombre} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="apellidoUsuario">Primer apellido</label>
-                                        <input type="text" className="form-control" name="apellido" id="apellidoUsuario" placeholder="Primer apellido" value={this.state.apellido} onChange={this.handleChange}></input>
+                                        <input type="text" className="form-control" name="apellido" id="valor" placeholder="Primer apellido" value={this.state.apellido} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="segundoApellidoUsuario">Segundo apellido</label>
-                                        <input type="text" className="form-control" name="segundoApellido" id="segundoApellidoUsuario" placeholder="Segundo apellido" value={this.state.segundoApellido} onChange={this.handleChange}></input>
+                                        <input type="text" className="form-control" name="segundoApellido" id="valor" placeholder="Segundo apellido" value={this.state.segundoApellido} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="InputEmail">Correo electrónico </label>
-                                        <input type="email" className="form-control" name="email" id="InputEmail" aria-describedby="emailHelp" placeholder="Ejemplo@impesa.net." value={this.state.email} onChange={this.handleChange}></input>
+                                        <input type="email" className="form-control" name="email" id="valor" aria-describedby="emailHelp" placeholder="Ejemplo@impesa.net." value={this.state.email} onChange={this.handleChange}></input>
                                         <br></br>
                                         <label for="contraseñaRegistro">Contraseña</label>
                                         <input type="password" className="form-control" name="contraseña" id="contraseñaRegistro" placeholder="Contraseña" value={this.state.contraseña} onChange={this.handleChange}></input>
@@ -168,7 +182,7 @@ class registroColaborador extends Component {
                             <Modal.Title>Contraseña Incorrecta</Modal.Title>
                         </Modal.Header>
 
-                        <Modal.Body>La contraseña tiene que ser fuerte para poder completar el registro</Modal.Body>
+                        <Modal.Body id="msj"></Modal.Body>
 
                         <Modal.Footer>
                             <Button id="close" bsStyle="primary">Aceptar</Button>
@@ -207,7 +221,7 @@ function validatePassword() {
         return false;
     } else if (mensaje == "Fuerte") {
         return true;
-    }else if(mensaje.length<1 || mensaje == null){
+    } else if (mensaje.length < 1 || mensaje == null) {
         return false;
     }
     return false;
